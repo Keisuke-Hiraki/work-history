@@ -1,12 +1,24 @@
 {
-    "plugins": {},
-    "filters": {},
-    "rules": {
-      "preset-ja-technical-writing": {
-        "no-exclamation-question-mark": false
+  "rules": {
+      "preset-smarthr": {
+          "sentence-length": {
+              "max": 150
+          }
       },
-      "@proofdict/proofdict": {
-        "dictURL": "https://azu.github.io/proof-dictionary/"
+      "prh": {
+          "rulePaths": [
+              "dict/prh.yml",
+              "dict/WEB+DB_PRESS.yml"
+          ]
       }
-    }
+ },
+  "filters": {
+      "allowlist": {
+          "allow": [
+              "/http(.+):embed:cite/",
+              "/.+👀/",
+              "/.+🐱/"
+          ]
+      }
   }
+}
