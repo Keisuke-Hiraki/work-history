@@ -60,7 +60,7 @@
 
 * #### 使用技術
 
-  * #### 言語　　：Python,シェルスクリプト
+  * #### 言語　　：Python,Shell Script
 
   * #### インフラ：AWS,OS(Linux,Windows)
 
