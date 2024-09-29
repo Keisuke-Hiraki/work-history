@@ -227,8 +227,8 @@ Linux/Windows
 
 ### SaaS
 
-- Microsoft(Outlook/Excel/Onedrive/PowerAutomate/Teams/SharePoint)  
-- Google(Gmail/Slide/Calender/Drive/Spredsheet/Docs/GAS/Meet)
+- Microsoft (Outlook/Excel/Onedrive/PowerAutomate/Teams/SharePoint)  
+- Google (Gmail/Slide/Calender/Drive/Spredsheet/Docs/GAS/Meet)
 - Slack/Tocaro/Box/Zoom/Webex/Ovice
 - Backlog/Jira/Hubspot
 - GitHub
