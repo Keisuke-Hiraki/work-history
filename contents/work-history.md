@@ -20,8 +20,8 @@
 
 ---
 
-- JavaScriptを触った
-- JacaScriptを触った
+- JavaScriptをさわった
+- JacaScriptをさわる
 
 * #### 経験トピック
 
