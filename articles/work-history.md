@@ -46,12 +46,12 @@
 - 在籍期間： 2024年4月 ～ 現在
 - 雇用形態： 正社員
 
-## AWSガイドライン策定支援
+### AWS運用支援
 
 - 概要
-  - AWS標準化に伴うガイドライン策定支援
+  - CCoEチーム発足に伴うAWS運用支援
 - 期間
-  - 2024年10月 ～ 現在
+  - 2023年10月 ～ 現在
 - 経験した職種・役割
   - ソリューションアーキテクト
 - 担当工程
@@ -59,9 +59,56 @@
 - 使用技術
   - インフラ： AWS
 - 業務内容
-  - 
+  - 全社AWS利用標準化に伴うガイドラインの更新支援
+  - Organizationsを活用しないマルチアカウントのセキュリティ・ユーザー・ネットワークの統制管理環境の設計
+  - 専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）
+  - セキュリティ運用効率化に伴うロジックの導入支援
 
-## 株式会社夢テクノロジー
+### 技術アドバイザー
+
+- 概要
+  - テクニカルアカウントマネージャー（以下、TAM）相当の顧客支援
+- 期間
+  - 2023年6月 ～ 現在
+- 経験した職種・役割
+  - ソリューションアーキテクト
+- 担当工程
+  - コンサルティング
+- 使用技術
+  - インフラ： AWS
+- 業務内容
+  - 顧客のAWS環境における技術課題の解決
+    - 顧客サービスにおけるメール機能実装におけるQA支援
+    - SPA構築に伴う設計支援
+    - 開発環境のCI/CDソリューション設計
+  - 定期的なAWSサービスのプライベート勉強会の開催
+
+### AWS利用ガイドライン策定支援・アカウント/セキュリティ導入支援
+
+- 概要
+  - データ分析基盤のAWS環境への移行に伴うAWS利用ガイドラインの策定およびアカウント/セキュリティの設計支援
+- 期間
+  - 2023年5月 ～ 2024年1月
+- 経験した職種・役割
+  - ソリューションアーキテクト
+- 担当工程
+  - コンサルティング
+- 使用技術
+  - インフラ： AWS
+- 業務内容
+  - 個人情報の取り扱いに準じたセキュリティを担保するソリューションの設計構築
+  - Control Tower,Organizationsを活用したベストプラクティスなアカウント設計構築
+  - 専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）
+
+### 案件外業務/単発業務
+
+- プリセールス
+- 技術相談会
+  - コスト最適化アセスメント
+  - セキュリティアセスメント
+  - マルチアカウント運用効率化支援
+
+## 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）
 
 - 事業内容： エンジニア派遣事業  
 - 従業員： 3642名（2021年6月時点）
@@ -178,18 +225,18 @@ DMS/DatSync/Transfer Family
 
 ### IaC
 
-Terraform,CloudFormation,Pulumi
+Terraform/CloudFormation/Pulumi
 
 ### OS
 
-Linux,Windows
+Linux/Windows
 
 ### SaaS
 
-- Microsoft(Outlook,Excel,Onedrive,PowerAutomate,Teams,SharePoint)  
-- Google(Gmail,Slide,Calender,Drive,Spredsheet,Docs,GAS,Meet)
-- Slack,Tocaro,Box,Zoom,Webex,Ovice
-- Backlog,Jira,Hubspot
+- Microsoft(Outlook/Excel/Onedrive/PowerAutomate/Teams/SharePoint)  
+- Google(Gmail/Slide/Calender/Drive/Spredsheet/Docs/GAS/Meet)
+- Slack/Tocaro/Box/Zoom/Webex/Ovice
+- Backlog/Jira/Hubspot
 - GitHub
 
 ## 保有資格
@@ -225,7 +272,8 @@ Linux,Windows
 
 ### ブログ
 
-[DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
+- [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
+- [Qiita](https://qiita.com/HIRA_dayo)
 
 ### 登壇
 
@@ -241,3 +289,8 @@ Linux,Windows
   - 資料： [クラウドの落とし穴：AWS Backupで発生した高額請求の衝撃とその教訓](https://speakerdeck.com/khiraki/kuraudonoluo-tosixue-aws-backupdefa-sheng-sitagao-e-qing-qiu-nochong-ji-tosonojiao-xun)
 - [DevelopersIO 2023](https://event.classmethod.jp/developers-io/2023)
   - 資料： [AIと一緒に音楽を作ろう ～作曲体験セッション～](https://speakerdeck.com/khiraki/aito-xu-niyin-le-wozuo-rou-zuo-qu-ti-yan-setusiyon-developersio-2023)
+
+### イベント開催
+
+- [AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜](https://classmethod.connpass.com/event/318667/)
+  - 開催報告： [AWS cafeteria #2　〜チーム対抗！みんなで最強の AWS アーキテクチャを考えよう！〜 を開催しました！](https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/)
