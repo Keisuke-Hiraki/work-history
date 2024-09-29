@@ -1,12 +1,12 @@
 {
+  "plugins": {},
+  "filters": {},
   "rules": {
-    "preset-ja-technical-writing": true
-  },
-  "filters": {
-    "allowlist": {
-      "allow": [
-        "ここに許容される言葉を書いていく"
-      ]
+    "preset-ja-technical-writing": {
+      "no-exclamation-question-mark": false
+    },
+    "@proofdict/proofdict": {
+      "dictURL": "https://azu.github.io/proof-dictionary/"
     }
   }
 }
