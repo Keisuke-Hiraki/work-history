@@ -212,6 +212,8 @@ Linux,Windows
 | Microsoft Certified: Azure Administrator Associate | 2023/01/30 |
 | Python 3 エンジニア認定基礎試験 | 2022/07/02 |
 
+最新は、[Credly](https://www.credly.com/users/keisuke-hiraki)を参照ください。
+
 ## 表彰
 
 | 名前 | 年 |
