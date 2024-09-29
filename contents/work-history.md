@@ -20,6 +20,9 @@
 
 ---
 
+- JavaScriptを触った
+- JacaScriptを触った
+
 * #### 経験トピック
 
   * #### CloudFormationによるインフラ基盤のIaC化
