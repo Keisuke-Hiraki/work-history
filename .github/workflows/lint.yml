@@ -1,19 +1,37 @@
-name: lint
-
-on:
-  pull_request:
-  workflow_dispatch:
-
+name: run-textlint
+on: 
+  pull_request_target:
+    types: [ opened, synchronize ]
+    paths: [ 'contents/**/*.md' ]
 jobs:
-  textlint:
-    name: lint
+  run-textlint:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    permissions:
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Switch to pull request branch
+        uses: actions/checkout@v3
         with:
-          node-version: 18
-          cache: npm
-      - run: npm install
-      - run: npm run lint
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Setup node with cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+      - name: Install packages via packages.json
+        run: npm install
+      - name: Run textlint (avoiding error)
+        run: npx textlint ./contents/**/*.md -o ./.textlint.log | true
+        shell: bash {0}
+      - name: Report if textlint finds problems
+        run: |
+          if [ -e ./.textlint.log ]; then
+            # create body file
+            pwd_esc=$(pwd | sed 's/\//\\\//g')
+            cat ./.textlint.log | sed "s/${pwd_esc}/### :policeman: ./g" >> ./.body.txt
+            # pr comment
+            gh pr comment --body-file ./.body.txt "${URL}"
+          fi        
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          URL: ${{ github.event.pull_request.html_url }}
