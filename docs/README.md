@@ -19,9 +19,9 @@
 
 | 期間 | 説明 |
 | --- | --- |
-| 2020年12月 | 静岡大学 工学部 機械工学科（中途退学） |
-| 2021年1月～2023年3月 | 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア） |
 | 2023年4月〜現在 | クラスメソッド株式会社 |
+| 2021年1月～2023年3月 | 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア） |
+| 2020年12月 | 静岡大学 工学部 機械工学科（中途退学） |
 
 # 業務経験概略
 
@@ -249,6 +249,8 @@ Linux/Windows
 | AWS Certified Data Analytics – Specialty | 2023/09/29 |
 | AWS Certified: SAP on AWS – Specialty | 2024/02/22 |
 | AWS Certified Advanced Networking – Specialty | 2024/03/15 |
+| AWS Certified AI Practitioner | 2025/03/10 |
+| AWS Certified Machine Learning Engineer – Associate | 2025/03/11 |
 | Microsoft Certified: Azure Fundamentals | 2022/05/08 |
 | Microsoft Certified: Azure Administrator Associate | 2023/01/30 |
 | Python 3 エンジニア認定基礎試験 | 2022/07/02 |
