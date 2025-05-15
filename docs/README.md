@@ -261,7 +261,7 @@ Linux/Windows
 
 | 名前 | 年 |
 | --- | --- |
-| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 |
+| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2025 |
 | [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 |
 
 ## 個人活動
