@@ -1,0 +1,99 @@
+<footer style="background: var(--gray-800); color: var(--gray-300); padding: 3rem 0 2rem; margin-top: 4rem;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      
+      <!-- Contact Info -->
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 1rem;">
+          <i class="fas fa-address-card" style="margin-right: 0.5rem; color: var(--primary-blue-light);"></i>
+          連絡先
+        </h4>
+        <div style="space-y: 0.5rem;">
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem; color: var(--accent-orange);"></i>
+            {{ site.author.location }}
+          </p>
+          {% if site.author.email %}
+          <p style="margin-bottom: 0.5rem;">
+            <i class="fas fa-envelope" style="margin-right: 0.5rem; color: var(--accent-orange);"></i>
+            <a href="mailto:{{ site.author.email }}" style="color: var(--gray-300); text-decoration: none;">
+              {{ site.author.email }}
+            </a>
+          </p>
+          {% endif %}
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 1rem;">
+          <i class="fas fa-link" style="margin-right: 0.5rem; color: var(--primary-blue-light);"></i>
+          クイックリンク
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="#profile" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">プロフィール</a>
+          <a href="#experience" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">職務経歴</a>
+          <a href="#skills" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">スキル・技術</a>
+          <a href="#certifications" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">資格・認定</a>
+        </div>
+      </div>
+      
+      <!-- External Links -->
+      <div>
+        <h4 style="color: var(--white); margin-bottom: 1rem;">
+          <i class="fas fa-external-link-alt" style="margin-right: 0.5rem; color: var(--primary-blue-light);"></i>
+          外部リンク
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          {% if site.social.developersio %}
+          <a href="{{ site.social.developersio }}" target="_blank" rel="noopener" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">
+            <i class="fas fa-blog" style="margin-right: 0.5rem;"></i>DevelopersIO
+          </a>
+          {% endif %}
+          {% if site.social.github %}
+          <a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">
+            <i class="fab fa-github" style="margin-right: 0.5rem;"></i>GitHub
+          </a>
+          {% endif %}
+          <a href="https://www.credly.com/users/keisuke-hiraki" target="_blank" rel="noopener" style="color: var(--gray-300); text-decoration: none; transition: color 0.3s ease;">
+            <i class="fas fa-certificate" style="margin-right: 0.5rem;"></i>Credly
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Divider -->
+    <div style="border-top: 1px solid var(--gray-600); padding-top: 2rem; margin-top: 2rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <p style="margin: 0; color: var(--gray-400); font-size: 0.875rem;">
+            © {{ 'now' | date: "%Y" }} {{ site.author.name }}. Last updated: {{ site.time | date: "%Y/%m/%d" }}
+          </p>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="https://github.com/{{ site.social.github }}/work-history" target="_blank" rel="noopener" style="color: var(--gray-400); text-decoration: none; font-size: 0.875rem; transition: color 0.3s ease;">
+            <i class="fab fa-github" style="margin-right: 0.25rem;"></i>
+            View Source
+          </a>
+          <span style="color: var(--gray-400); font-size: 0.875rem;">
+            <i class="fas fa-code" style="margin-right: 0.25rem;"></i>
+            Built with Jekyll
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+footer a:hover {
+  color: var(--primary-blue-light) !important;
+}
+
+@media (max-width: 768px) {
+  footer > .container > div:last-child > div {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+</style>

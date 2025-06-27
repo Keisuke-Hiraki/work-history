@@ -1,0 +1,17 @@
+<section id="profile" class="container" style="padding: 3rem 0;">
+  <div class="card">
+    <div class="section-header">
+      <i class="fas fa-user icon"></i>
+      <h2>プロフィール</h2>
+    </div>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+      <div>
+        <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">基本情報</h3>
+        {% include components/basic-info-table.html %}
+      </div>
+      
+      {% include components/summary.html %}
+    </div>
+  </div>
+</section>

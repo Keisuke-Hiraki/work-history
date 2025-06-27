@@ -1,3 +1,52 @@
-remote_theme: pages-themes/cayman@v0.2.0
-title: 職務経歴書
-description: 平木 佳介
+title: 職務経歴書 | 平木 佳介
+description: AWS Solution Architect - Keisuke Hiraki's Professional Resume
+baseurl: ""
+url: "https://keisuke-hiraki.github.io"
+
+# Personal Information
+author:
+  name: 平木 佳介
+  name_en: Keisuke Hiraki
+  role: ソリューションアーキテクト
+  role_en: Solution Architect
+  company: クラスメソッド株式会社
+  email: contact@example.com
+  location: Tokyo, Japan
+
+# Social Links
+social:
+  github: Keisuke-Hiraki
+  linkedin: k-hiraki
+  twitter: k_hirasan
+  speakerdeck: khiraki
+  developersio: https://dev.classmethod.jp/author/hiraki-keisuke/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  certifications:
+    output: false
+  projects:
+    output: false
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache

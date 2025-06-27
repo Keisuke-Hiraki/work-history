@@ -5,7 +5,10 @@
   "scripts": {
     "lint": "textlint docs/README.md",
     "format": "textlint --fix docs/README.md",
-    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js"
+    "build:pdf": "cd docs && bundle exec jekyll build && cd .. && md-to-pdf docs/_site/resume-for-pdf.html --config-file ./pdf-config/config.js",
+    "build:pdf:simple": "md-to-pdf docs/resume-for-pdf.md --config-file ./pdf-config/config.js",
+    "serve": "bundle exec jekyll serve --source docs --livereload",
+    "build": "bundle exec jekyll build --source docs"
   },
   "keywords": [],
   "devDependencies": {

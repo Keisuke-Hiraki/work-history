@@ -1,0 +1,66 @@
+<!-- AWS Certifications -->
+<div style="margin-bottom: 3rem;">
+  <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; display: flex; align-items: center;">
+    <i class="fab fa-aws" style="margin-right: 0.75rem; color: var(--accent-orange); font-size: 1.5rem;"></i>
+    AWS認定資格
+    <span style="background: var(--accent-green); color: white; font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 12px; margin-left: 1rem;">全{{ site.data.resume.certifications.aws | size }}冠達成</span>
+  </h3>
+  
+  <div class="certification-grid">
+    {% for cert in site.data.resume.certifications.aws %}
+    <div class="cert-badge" style="border-left: 4px solid {{ cert.color }};">
+      <div class="cert-icon" style="background: linear-gradient(135deg, {{ cert.color }}, {{ cert.color }}dd);">
+        <i class="{{ cert.icon }}"></i>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">{{ cert.name }}</div>
+        <div class="cert-date">{{ cert.date }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="https://www.credly.com/users/keisuke-hiraki" target="_blank" rel="noopener" class="btn btn-primary">
+      <i class="fas fa-external-link-alt icon"></i>
+      Credly で詳細を確認
+    </a>
+  </div>
+</div>
+
+<!-- Other Certifications -->
+{% if site.data.resume.certifications.other %}
+<div style="margin-bottom: 3rem;">
+  <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">その他の資格</h3>
+  <div style="display: grid; gap: 1rem;">
+    {% for cert in site.data.resume.certifications.other %}
+    <div style="padding: 1rem; background: var(--gray-50); border-radius: 8px; border-left: 4px solid var(--primary-blue);">
+      <h4 style="margin-bottom: 0.5rem; color: var(--gray-800);">{{ cert.name }}</h4>
+      <p style="margin: 0; color: var(--gray-600); font-size: 0.875rem;">{{ cert.provider }} | {{ cert.date }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- Awards -->
+<div style="margin-bottom: 3rem;">
+  <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; display: flex; align-items: center;">
+    <i class="fas fa-award" style="margin-right: 0.75rem; color: var(--accent-orange); font-size: 1.5rem;"></i>
+    表彰・認定
+  </h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem;">
+    {% for award in site.data.resume.awards %}
+    <div class="cert-badge" style="border-left: 4px solid {{ award.color }}; background: linear-gradient(135deg, {{ award.color }}1a, {{ award.color }}0d);">
+      <div class="cert-icon" style="background: linear-gradient(135deg, {{ award.color }}, {{ award.color }}dd);">
+        <i class="{{ award.icon }}"></i>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">{{ award.name }}</div>
+        <div class="cert-date">{{ award.year }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

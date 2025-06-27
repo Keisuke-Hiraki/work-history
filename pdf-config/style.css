@@ -1,41 +1,327 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
 
-body {
-  font-size: 12px;
-  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+/* PDF-specific styles */
+.resume-pdf {
+  font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #1f2937;
+  background: white;
+  margin: 0;
+  padding: 0;
 }
 
-h1:first-child {
-  margin-top: 0;
-  padding-top: 0;
+/* Typography for PDF */
+.resume-pdf h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e40af;
   text-align: center;
+  margin: 0 0 15px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3b82f6;
 }
 
-table {
+.resume-pdf h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e40af;
+  margin: 20px 0 10px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.resume-pdf h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  margin: 15px 0 8px 0;
+}
+
+.resume-pdf h4 {
   font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 10px 0 6px 0;
+}
+
+.resume-pdf p {
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+/* Tables */
+.resume-pdf table {
+  width: 100%;
   border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 9px;
 }
 
-td,
-th {
-  border: 1px solid #ddd;
-  padding: 5px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
-}
-
-th {
+.resume-pdf td,
+.resume-pdf th {
+  border: 1px solid #d1d5db;
+  padding: 6px 8px;
   text-align: left;
-  background-color: #ddd;
+  vertical-align: top;
 }
 
-hr {
-  border-top: 1px solid #ddd;
-  margin: 30px 0;
+.resume-pdf th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+.resume-pdf tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Lists */
+.resume-pdf ul, .resume-pdf ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.resume-pdf li {
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+/* Remove web-specific elements */
+.resume-pdf .hero-section,
+.resume-pdf .sticky-nav,
+.resume-pdf .download-section,
+.resume-pdf .social-links,
+.resume-pdf footer,
+.resume-pdf .btn,
+.resume-pdf .nav-link {
+  display: none !important;
+}
+
+/* Layout adjustments for PDF */
+.resume-pdf .container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-pdf .card {
+  background: white;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0 0 20px 0;
+  box-shadow: none;
+}
+
+.resume-pdf .section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.resume-pdf .section-header .icon {
+  font-size: 14px;
+  color: #1e40af;
+  margin-right: 8px;
+}
+
+.resume-pdf .section-header h2 {
+  margin: 0;
+  font-size: 14px;
+  border: none;
+  padding: 0;
+}
+
+/* Timeline for experience */
+.resume-pdf .timeline {
+  position: relative;
+  padding-left: 0;
+}
+
+.resume-pdf .timeline::before {
+  display: none;
+}
+
+.resume-pdf .timeline-item {
+  position: relative;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 0;
+  padding: 12px;
+  box-shadow: none;
+  border: 1px solid #e5e7eb;
+  page-break-inside: avoid;
+}
+
+.resume-pdf .timeline-item::before {
+  display: none;
+}
+
+.resume-pdf .timeline-date {
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.resume-pdf .timeline-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 3px;
+}
+
+.resume-pdf .timeline-company {
+  color: #6b7280;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.resume-pdf .timeline-description {
+  color: #4b5563;
+  line-height: 1.4;
+  font-size: 9px;
+}
+
+/* Skills and certifications */
+.resume-pdf .skill-category {
+  background: white;
+  padding: 12px;
+  border-radius: 0;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 10px;
+  page-break-inside: avoid;
+}
+
+.resume-pdf .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.resume-pdf .skill-tag {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #374151;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: 500;
+  margin: 1px;
+}
+
+.resume-pdf .certification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.resume-pdf .cert-badge {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 0;
+  border: 1px solid #e5e7eb;
+  page-break-inside: avoid;
+}
+
+.resume-pdf .cert-icon {
+  width: 24px;
+  height: 24px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 10px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.resume-pdf .cert-info .cert-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.resume-pdf .cert-info .cert-date {
+  color: #6b7280;
+  font-size: 7px;
+}
+
+/* Page breaks */
+.resume-pdf section {
+  page-break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+/* Links */
+.resume-pdf a {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+.resume-pdf a:after {
+  content: " (" attr(href) ")";
+  font-size: 7px;
+  color: #6b7280;
+}
+
+/* Hide interactive elements */
+.resume-pdf [onclick],
+.resume-pdf button,
+.resume-pdf .btn {
+  display: none !important;
+}
+
+/* Activities section */
+.resume-pdf .activities-item {
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 0;
+  border-left: 3px solid #1e40af;
+  margin-bottom: 8px;
+  page-break-inside: avoid;
+}
+
+/* Override any conflicting styles */
+.resume-pdf * {
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Ensure proper page margins */
+@page {
+  margin: 20mm 15mm 25mm 15mm;
+  size: A4;
+}
+
+/* Print-specific adjustments */
+@media print {
+  .resume-pdf {
+    font-size: 9px;
+  }
+  
+  .resume-pdf h1 {
+    font-size: 18px;
+  }
+  
+  .resume-pdf h2 {
+    font-size: 13px;
+  }
+  
+  .resume-pdf .timeline-item,
+  .resume-pdf .cert-badge,
+  .resume-pdf .skill-category {
+    break-inside: avoid;
+  }
 }

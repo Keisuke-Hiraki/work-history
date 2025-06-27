@@ -1,0 +1,11 @@
+<div>
+  <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">業務経験概要</h3>
+  <div style="line-height: 1.8; color: var(--gray-700);">
+    {{ site.data.resume.personal.summary | markdownify }}
+  </div>
+  <ul style="line-height: 1.8; color: var(--gray-700); padding-left: 1.5rem;">
+    {% for point in site.data.resume.personal.summary_points %}
+    <li>{{ point }}</li>
+    {% endfor %}
+  </ul>
+</div>

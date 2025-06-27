@@ -1,0 +1,112 @@
+<header class="hero-section">
+  <div class="hero-content">
+    <div class="container">
+      <!-- Profile Avatar Placeholder -->
+      <div class="profile-avatar" style="background: linear-gradient(135deg, #3b82f6, #1e40af); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+        {{ site.author.name_en | slice: 0, 2 | upcase }}
+      </div>
+      
+      <h1 class="hero-title">{{ site.author.name }}</h1>
+      <p class="hero-subtitle" style="font-size: 1.5rem; margin-bottom: 0.5rem; opacity: 0.9;">{{ site.author.role }}</p>
+      <p class="hero-company" style="font-size: 1.125rem; opacity: 0.8; margin-bottom: 2rem;">{{ site.author.company }}</p>
+      
+      <!-- Social Links -->
+      <div class="social-links">
+        {% if site.social.github %}
+          <a href="https://github.com/{{ site.social.github }}" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        {% endif %}
+        {% if site.social.linkedin %}
+          <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        {% endif %}
+        {% if site.social.twitter %}
+          <a href="https://twitter.com/{{ site.social.twitter }}" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        {% endif %}
+        {% if site.social.speakerdeck %}
+          <a href="https://speakerdeck.com/{{ site.social.speakerdeck }}" class="social-link" target="_blank" rel="noopener" aria-label="Speaker Deck">
+            <i class="fas fa-presentation"></i>
+          </a>
+        {% endif %}
+        {% if site.social.developersio %}
+          <a href="{{ site.social.developersio }}" class="social-link" target="_blank" rel="noopener" aria-label="DevelopersIO">
+            <i class="fas fa-blog"></i>
+          </a>
+        {% endif %}
+      </div>
+      
+      <!-- Download Buttons -->
+      <div class="download-section" style="background: rgba(255, 255, 255, 0.1); margin-top: 3rem;">
+        <h3 style="color: white; margin-bottom: 1.5rem;">履歴書をダウンロード</h3>
+        <div class="download-buttons">
+          <button onclick="downloadPDF()" class="btn btn-primary">
+            <i class="fas fa-file-pdf icon"></i>
+            PDF形式
+          </button>
+          <button onclick="downloadMarkdown()" class="btn btn-secondary">
+            <i class="fab fa-markdown icon"></i>
+            Markdown形式
+          </button>
+          <button onclick="printPage()" class="btn btn-secondary">
+            <i class="fas fa-print icon"></i>
+            印刷
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation (Sticky) -->
+<nav class="sticky-nav" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+  <div class="container">
+    <div style="display: flex; justify-content: center; padding: 1rem 0;">
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <a href="#profile" class="nav-link" style="color: var(--gray-700); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.3s ease;">
+          <i class="fas fa-user icon"></i>プロフィール
+        </a>
+        <a href="#experience" class="nav-link" style="color: var(--gray-700); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.3s ease;">
+          <i class="fas fa-briefcase icon"></i>職務経歴
+        </a>
+        <a href="#skills" class="nav-link" style="color: var(--gray-700); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.3s ease;">
+          <i class="fas fa-code icon"></i>スキル
+        </a>
+        <a href="#certifications" class="nav-link" style="color: var(--gray-700); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.3s ease;">
+          <i class="fas fa-certificate icon"></i>資格
+        </a>
+        <a href="#activities" class="nav-link" style="color: var(--gray-700); text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.3s ease;">
+          <i class="fas fa-microphone icon"></i>活動
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+.nav-link:hover {
+  background: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.nav-link .icon {
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .sticky-nav > .container > div {
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .sticky-nav > .container > div > div {
+    gap: 1rem !important;
+    white-space: nowrap;
+  }
+}
+</style>

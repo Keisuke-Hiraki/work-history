@@ -1,0 +1,41 @@
+<!-- Speaking -->
+<div style="margin-bottom: 3rem;">
+  <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; display: flex; align-items: center;">
+    <i class="fas fa-presentation" style="margin-right: 0.75rem; color: var(--accent-orange);"></i>
+    登壇・発表
+  </h3>
+  
+  <div style="display: grid; gap: 1.5rem;">
+    {% for speaking in site.data.resume.activities.speaking %}
+    <div style="padding: 1.5rem; background: var(--gray-50); border-radius: 8px; border-left: 4px solid var(--primary-blue);">
+      <h4 style="margin-bottom: 0.5rem; color: var(--gray-800);">{{ speaking.event }}</h4>
+      <p style="margin-bottom: 0.75rem; color: var(--gray-600);">{{ speaking.title }}</p>
+      <a href="{{ speaking.url }}" target="_blank" rel="noopener" style="color: var(--primary-blue); text-decoration: none; font-size: 0.875rem;">
+        <i class="fas fa-external-link-alt" style="margin-right: 0.25rem;"></i>資料を見る
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Writing -->
+<div style="margin-bottom: 3rem;">
+  <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem; display: flex; align-items: center;">
+    <i class="fas fa-pen" style="margin-right: 0.75rem; color: var(--accent-green);"></i>
+    執筆・ブログ
+  </h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+    {% for writing in site.data.resume.activities.writing %}
+    <a href="{{ writing.url }}" target="_blank" rel="noopener" style="text-decoration: none;">
+      <div style="padding: 1.5rem; background: var(--white); border-radius: 8px; border: 2px solid var(--gray-200); transition: all 0.3s ease; height: 100%;">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <i class="{{ writing.icon }}" style="font-size: 1.5rem; color: var(--{{ writing.color }}); margin-right: 0.75rem;"></i>
+          <h4 style="margin: 0; color: var(--gray-800);">{{ writing.platform }}</h4>
+        </div>
+        <p style="color: var(--gray-600); margin: 0; font-size: 0.875rem;">{{ writing.description }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
