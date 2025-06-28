@@ -1,0 +1,542 @@
+{
+  "lastUpdated": "2025-03-11",
+  "basicInfo": {
+    "name": {
+      "ja": "平木 佳介",
+      "en": "Hiraki Keisuke"
+    },
+    "role": {
+      "ja": "ソリューションアーキテクト",
+      "en": "Solution Architect"
+    }
+  },
+  "socialLinks": [
+    {
+      "name": "DevelopersIO",
+      "url": "https://dev.classmethod.jp/author/hiraki-keisuke/",
+      "type": "blog"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/k-hiraki/",
+      "type": "professional"
+    },
+    {
+      "name": "X(旧Twitter)",
+      "url": "https://x.com/k_hirasan",
+      "type": "social"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/Keisuke-Hiraki",
+      "type": "code"
+    },
+    {
+      "name": "SpeakerDeck",
+      "url": "https://speakerdeck.com/khiraki",
+      "type": "presentation"
+    },
+    {
+      "name": "Credly",
+      "url": "https://www.credly.com/users/keisuke-hiraki",
+      "type": "certification"
+    },
+    {
+      "name": "Qiita",
+      "url": "https://qiita.com/HIRA_dayo",
+      "type": "blog"
+    }
+  ],
+  "careerSummary": [
+    {
+      "period": "2023年4月〜現在",
+      "company": "クラスメソッド株式会社",
+      "status": "current"
+    },
+    {
+      "period": "2021年1月～2023年3月",
+      "company": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
+      "status": "past"
+    },
+    {
+      "period": "2020年12月",
+      "company": "静岡大学 工学部 機械工学科（中途退学）",
+      "status": "education"
+    }
+  ],
+  "workExperience": {
+    "overview": {
+      "ja": "現在は、AWSクラウドソリューションアーキテクトとして主にAWSを活用した設計構築・コンサルティング支援を行っております。",
+      "keyExperiences": [
+        "PCIDSSに準拠した金融システムのAWS基盤設計構築運用",
+        "大手ポイントサービスにおけるデータ分析基盤のネットワーク・セキュリティ設計構築支援",
+        "CloudFormation、Terraformを活用したインフラ基盤のIaC化",
+        "エンタープライズ企業向けマルチアカウント環境下AWSセキュリティ・ガバナンスにおけるコンサル・ガイドライン導入支援",
+        "ブロックチェーン技術に基づくAWSインフラの設計構築支援"
+      ]
+    },
+    "companies": [
+      {
+        "name": "クラスメソッド株式会社",
+        "businessDescription": "クラウド（AWS等）の技術コンサルティング、開発等",
+        "employees": "約780名（2024年7月現在、グループ全体）",
+        "period": {
+          "start": "2023年4月",
+          "end": "現在"
+        },
+        "employmentType": "正社員",
+        "projects": [
+          {
+            "title": "AWS運用支援",
+            "overview": "CCoEチーム発足に伴うAWS運用支援",
+            "period": {
+              "start": "2023年10月",
+              "end": "現在"
+            },
+            "role": "ソリューションアーキテクト",
+            "responsibilities": [
+              "コンサルティング"
+            ],
+            "technologies": {
+              "infrastructure": ["AWS"]
+            },
+            "tasks": [
+              "全社AWS利用標準化に伴うガイドラインの更新支援",
+              "Organizationsを活用しないマルチアカウントのセキュリティ・ユーザー・ネットワークの統制管理環境の設計",
+              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）",
+              "セキュリティ運用効率化に伴うロジックの導入支援"
+            ]
+          },
+          {
+            "title": "技術アドバイザー",
+            "overview": "テクニカルアカウントマネージャー（以下、TAM）相当の顧客支援",
+            "period": {
+              "start": "2023年6月",
+              "end": "現在"
+            },
+            "role": "ソリューションアーキテクト",
+            "responsibilities": [
+              "コンサルティング"
+            ],
+            "technologies": {
+              "infrastructure": ["AWS"]
+            },
+            "tasks": [
+              "顧客のAWS環境における技術課題の解決",
+              "顧客サービスにおけるメール機能実装におけるQA支援",
+              "SPA構築に伴う設計支援",
+              "開発環境のCI/CDソリューション設計",
+              "定期的なAWSサービスのプライベート勉強会の開催"
+            ]
+          },
+          {
+            "title": "AWS利用ガイドライン策定支援・アカウント/セキュリティ導入支援",
+            "overview": "データ分析基盤のAWS環境への移行に伴うAWS利用ガイドラインの策定およびアカウント/セキュリティの設計支援",
+            "period": {
+              "start": "2023年5月",
+              "end": "2024年1月"
+            },
+            "role": "ソリューションアーキテクト",
+            "responsibilities": [
+              "コンサルティング"
+            ],
+            "technologies": {
+              "infrastructure": ["AWS"]
+            },
+            "tasks": [
+              "個人情報の取り扱いに準じたセキュリティを担保するソリューションの設計構築",
+              "Control Tower,Organizationsを活用したベストプラクティスなアカウント設計構築",
+              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）"
+            ]
+          }
+        ],
+        "additionalActivities": [
+          "プリセールス",
+          "技術相談会",
+          "コスト最適化アセスメント",
+          "セキュリティアセスメント",
+          "マルチアカウント運用効率化支援"
+        ]
+      },
+      {
+        "name": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
+        "businessDescription": "エンジニア派遣事業",
+        "employees": "3642名（2021年6月時点）",
+        "period": {
+          "start": "2021年1月",
+          "end": "2023年3月"
+        },
+        "employmentType": "正社員",
+        "projects": [
+          {
+            "title": "決済代行システム AWS基盤運用案件",
+            "overview": "決済代行システム基盤の AWS への移行、構築運用",
+            "period": {
+              "start": "2022年1月",
+              "end": "2023年3月"
+            },
+            "role": "AWSエンジニア",
+            "responsibilities": [
+              "システム移行",
+              "構築運用業務"
+            ],
+            "technologies": {
+              "infrastructure": ["AWS", "シェルスクリプト", "SQL"],
+              "serverSide": ["Python"]
+            },
+            "tasks": [
+              "AWSリソース全般の障害調査担当",
+              "PCIDSSに準拠したコンポーネントの設定の調査",
+              "マルチアカウント環境下でのスイッチロール作業",
+              "IDS/IPSの導入(Tripwire)",
+              "運用改善に向けたタスク自動化（PowerAutomate等）の導入",
+              "CloudFormationによるインフラ基盤のIaC化",
+              "新機能リリースに伴うAWSリソースの構築"
+            ]
+          },
+          {
+            "title": "金融系EDIシステム 設計構築案件",
+            "overview": "金融系EDIサービスインフラ基盤の詳細設計、構築",
+            "period": {
+              "start": "2021年8月",
+              "end": "2021年12月"
+            },
+            "role": "AWSエンジニア",
+            "responsibilities": [
+              "設計構築"
+            ],
+            "technologies": {
+              "infrastructure": ["AWS"],
+              "serverSide": ["Python"]
+            },
+            "tasks": [
+              "AWSネットワークリソース全般の設計の提案構築を担当",
+              "PCIDSSに準拠したコンポーネントの選定や設定の調査",
+              "DR対策のためのF/OのLambdaによる自動化機能を構築",
+              "マルチアカウント環境下でのスイッチロール作業",
+              "CloudFormationによるインフラ基盤のIaC化"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "aws": {
+      "computing": [
+        "EC2",
+        "Lambda",
+        "ECS",
+        "Fargate",
+        "EC2 Auto Scaling",
+        "Lightsail",
+        "Compute Optimizer"
+      ],
+      "storage": [
+        "S3",
+        "EBS",
+        "EFS",
+        "Backup"
+      ],
+      "database": [
+        "RDS(MySQL,PostgreSQL,Aurora)",
+        "DynamoDB",
+        "Redshift",
+        "ElastiCache"
+      ],
+      "networkingAndContentDelivery": [
+        "VPC",
+        "CloudFront",
+        "Route 53",
+        "ELB",
+        "Transit Gateway",
+        "Direct Connect",
+        "Client VPN",
+        "Global Accelerator",
+        "PrivateLink"
+      ],
+      "securityIdentityCompliance": [
+        "IAM",
+        "Cognito",
+        "Security Hub",
+        "GuardDuty",
+        "Detective",
+        "IAM Access Analyzer",
+        "Inspector",
+        "WAF",
+        "Shield Advanced",
+        "Network Firewall",
+        "Security Lake",
+        "AWS Certificate Manager",
+        "KMS"
+      ],
+      "managementGovernance": [
+        "CloudWatch",
+        "CloudFormation",
+        "CloudTrail",
+        "Config",
+        "Organizations",
+        "Control Tower",
+        "Trusted Advisor",
+        "Systems Manager"
+      ],
+      "analytics": [
+        "Athena",
+        "Glue",
+        "OpenSearch Service"
+      ],
+      "applicationIntegration": [
+        "SNS",
+        "SQS",
+        "Step Functions",
+        "Data Firehose",
+        "EventBridge"
+      ],
+      "developerTools": [
+        "CodePipeline",
+        "CodeBuild",
+        "CodeDeploy",
+        "CodeCommit",
+        "CloudShell",
+        "Cloud9",
+        "AWS CLI",
+        "AWS SDK"
+      ],
+      "multiAccountManagement": [
+        "Organizations",
+        "Control Tower",
+        "IAM Identity Center(旧AWS SSO)",
+        "RAM"
+      ],
+      "businessApplications": [
+        "Amazon Connect"
+      ],
+      "cloudFinancialManagement": [
+        "Budgets",
+        "Cost and Usage Report",
+        "Cost Explorer",
+        "RI・SP"
+      ],
+      "mobileWebAppDevelopment": [
+        "API Gateway",
+        "SES"
+      ],
+      "migrationTransfer": [
+        "DMS",
+        "DataSync",
+        "Transfer Family"
+      ]
+    },
+    "iac": [
+      "Terraform",
+      "CloudFormation",
+      "Pulumi"
+    ],
+    "os": [
+      "Linux",
+      "Windows"
+    ],
+    "saas": {
+      "microsoft": [
+        "Outlook",
+        "Excel",
+        "OneDrive",
+        "PowerAutomate",
+        "Teams",
+        "SharePoint"
+      ],
+      "google": [
+        "Gmail",
+        "Slide",
+        "Calendar",
+        "Drive",
+        "Spreadsheet",
+        "Docs",
+        "GAS",
+        "Meet"
+      ],
+      "communication": [
+        "Slack",
+        "Tocaro",
+        "Box",
+        "Zoom",
+        "Webex",
+        "Ovice"
+      ],
+      "projectManagement": [
+        "Backlog",
+        "Jira",
+        "HubSpot"
+      ],
+      "development": [
+        "GitHub"
+      ]
+    }
+  },
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "date": "2021-01-10",
+      "category": "aws",
+      "level": "foundational"
+    },
+    {
+      "name": "AWS Certified Solutions Architect - Associate",
+      "date": "2021-03-11",
+      "category": "aws",
+      "level": "associate"
+    },
+    {
+      "name": "AWS Certified Developer - Associate",
+      "date": "2022-03-22",
+      "category": "aws",
+      "level": "associate"
+    },
+    {
+      "name": "AWS Certified SysOps Administrator - Associate",
+      "date": "2022-04-16",
+      "category": "aws",
+      "level": "associate"
+    },
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "date": "2022-06-20",
+      "category": "aws",
+      "level": "professional"
+    },
+    {
+      "name": "AWS Certified DevOps Engineer - Professional",
+      "date": "2022-07-18",
+      "category": "aws",
+      "level": "professional"
+    },
+    {
+      "name": "AWS Certified Database – Specialty",
+      "date": "2023-07-17",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified Security – Specialty",
+      "date": "2023-08-08",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified Machine Learning – Specialty",
+      "date": "2023-08-25",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified Data Analytics – Specialty",
+      "date": "2023-09-29",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified: SAP on AWS – Specialty",
+      "date": "2024-02-22",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified Advanced Networking – Specialty",
+      "date": "2024-03-15",
+      "category": "aws",
+      "level": "specialty"
+    },
+    {
+      "name": "AWS Certified AI Practitioner",
+      "date": "2025-03-10",
+      "category": "aws",
+      "level": "foundational"
+    },
+    {
+      "name": "AWS Certified Machine Learning Engineer – Associate",
+      "date": "2025-03-11",
+      "category": "aws",
+      "level": "associate"
+    },
+    {
+      "name": "Microsoft Certified: Azure Fundamentals",
+      "date": "2022-05-08",
+      "category": "azure",
+      "level": "foundational"
+    },
+    {
+      "name": "Microsoft Certified: Azure Administrator Associate",
+      "date": "2023-01-30",
+      "category": "azure",
+      "level": "associate"
+    },
+    {
+      "name": "Python 3 エンジニア認定基礎試験",
+      "date": "2022-07-02",
+      "category": "programming",
+      "level": "basic"
+    }
+  ],
+  "awards": [
+    {
+      "name": "AWS Community Builders",
+      "year": "2024 - 2025",
+      "url": "https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND",
+      "category": "community"
+    },
+    {
+      "name": "Japan AWS All Certifications Engineers",
+      "year": "2024",
+      "url": "https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/",
+      "category": "certification"
+    }
+  ],
+  "personalActivities": {
+    "speaking": [
+      {
+        "event": "JAWS ミート 2024",
+        "eventUrl": "https://jaws-ug-tokaido.connpass.com/event/315732/",
+        "title": "踏み台の運用が変わる？ VPC上で起動できるようになったCloudShellを語る",
+        "slideUrl": "https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru"
+      },
+      {
+        "event": "オフライン世界最速？AWS re:Inforce 2024 re:Cap セミナー",
+        "eventUrl": "https://classmethod.connpass.com/event/320489/",
+        "title": "IAM Access Analyzer のアップデートを語ります",
+        "slideUrl": "https://speakerdeck.com/khiraki/iam-access-analyzernoatupudetowoyu-rimasu"
+      },
+      {
+        "event": "まるクラ勉強会 ONLINE #02 - AWS&Google Cloudの環境分離戦略編 -",
+        "eventUrl": "https://classmethod.connpass.com/event/313913/",
+        "title": "組織におけるAWSネットワーク集約王者決定戦",
+        "slideUrl": "https://speakerdeck.com/khiraki/zu-zhi-niokeruawsnetutowakuji-yue-wang-zhe-jue-ding-zhan"
+      },
+      {
+        "event": "Hibiya.Tech #4「初心者歓迎！使ってみた技術LT大会」",
+        "eventUrl": "https://classmethod.connpass.com/event/311851/",
+        "title": "速さの鍵を握る! Fastly で実現する CDN の力",
+        "slideUrl": "https://speakerdeck.com/khiraki/su-sanojian-wowo-ru-fastly-deshi-xian-suru-cdn-noli"
+      },
+      {
+        "event": "AWS cafeteria #1　〜サイバーエージェント×ゆめみ×クラスメソッド 3社共催LT会〜",
+        "eventUrl": "https://cyberagent.connpass.com/event/303690/",
+        "title": "クラウドの落とし穴：AWS Backupで発生した高額請求の衝撃とその教訓",
+        "slideUrl": "https://speakerdeck.com/khiraki/kuraudonoluo-tosixue-aws-backupdefa-sheng-sitagao-e-qing-qiu-nochong-ji-tosonojiao-xun"
+      },
+      {
+        "event": "DevelopersIO 2023",
+        "eventUrl": "https://event.classmethod.jp/developers-io/2023",
+        "title": "AIと一緒に音楽を作ろう ～作曲体験セッション～",
+        "slideUrl": "https://speakerdeck.com/khiraki/aito-xu-niyin-le-wozuo-rou-zuo-qu-ti-yan-setusiyon-developersio-2023"
+      }
+    ],
+    "eventOrganizing": [
+      {
+        "event": "AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜",
+        "eventUrl": "https://classmethod.connpass.com/event/318667/",
+        "reportUrl": "https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/",
+        "reportTitle": "AWS cafeteria #2　〜チーム対抗！みんなで最強の AWS アーキテクチャを考えよう！〜 を開催しました！"
+      }
+    ]
+  }
+}
