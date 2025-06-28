@@ -5,16 +5,79 @@ import { useState } from 'react';
 export default function DownloadButton() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const generateMarkdownContent = () => {
+    // Fallback static content since getResumeData() doesn't work in production build
+    return `最終更新日: 2025年6月28日
+
+# 基本情報
+
+| Key | Value |
+| --- | --- |
+| 名前 | 平木佳介（Keisuke Hiraki） |
+| 職種 | AWSクラウドソリューションアーキテクト |
+
+# アカウント
+
+- [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
+- [GitHub](https://github.com/keisuke-hiraki)
+- [LinkedIn](https://www.linkedin.com/in/keisuke-hiraki)
+- [X(@hirakikeisuke)](https://x.com/hirakikeisuke)
+- [SpeakerDeck](https://speakerdeck.com/hirakikeisuke)
+- [Credly](https://www.credly.com/users/keisuke-hiraki)
+
+# 職務経歴概略
+
+| 期間 | 説明 |
+| --- | --- |
+| 2023年5月〜現在 | クラスメソッド株式会社 |
+| 2019年4月〜2023年4月 | 内定通知株式会社 |
+| 2015年4月〜2019年3月 | 大学（中退） |
+
+# 業務経験概略
+
+現在は、AWSクラウドソリューションアーキテクトとして主にAWSを活用した設計構築・コンサルティング支援を行っております。
+
+主な業務経験としては以下です。
+
+- AWSクラウド基盤設計・構築・運用支援
+- サーバレスアーキテクチャの設計・実装支援
+- IaC（Infrastructure as Code）を用いたインフラ自動化
+- DevOps・CI/CDパイプライン構築支援
+- セキュリティ基盤設計・実装支援
+- エンジニア向けコンテンツ制作・ブログ執筆
+- コミュニティ活動・登壇・イベント開催
+
+この内容は簡略版です。最新の詳細情報については、Webサイトをご覧ください。
+`;
+  };
+
   const handleDownload = (format: 'pdf' | 'markdown') => {
     if (format === 'pdf') {
       window.print();
     } else if (format === 'markdown') {
-      const link = document.createElement('a');
-      link.href = '/resume.md';
-      link.download = 'hiraki-keisuke-resume.md';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      try {
+        const markdownContent = generateMarkdownContent();
+        if (!markdownContent) {
+          throw new Error('Empty markdown content');
+        }
+        
+        const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'hiraki-keisuke-resume.md';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Clean up the URL object
+        setTimeout(() => URL.revokeObjectURL(url), 100);
+      } catch (error) {
+        console.error('Markdown download failed:', error);
+        alert('Markdownファイルのダウンロードに失敗しました。');
+      }
     }
     setIsDropdownOpen(false);
   };
