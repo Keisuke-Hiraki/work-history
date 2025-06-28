@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import DownloadButton from './DownloadButton';
+import DarkModeToggle from './DarkModeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,10 @@ export default function Header() {
               資格
             </a>
           </nav>
-          <DownloadButton />
+          <div className="flex items-center space-x-3">
+            <DarkModeToggle />
+            <DownloadButton />
+          </div>
         </div>
 
         <button
@@ -62,7 +66,8 @@ export default function Header() {
             <a href="#certifications" className="block text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">
               資格
             </a>
-            <div className="pt-2">
+            <div className="pt-2 flex items-center space-x-3">
+              <DarkModeToggle />
               <DownloadButton />
             </div>
           </nav>
