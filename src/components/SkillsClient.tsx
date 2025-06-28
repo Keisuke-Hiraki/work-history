@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Skills } from '@/lib/markdownParser';
+import type { Skills } from '@/lib/types';
 
 interface SkillsClientProps {
   skills: Skills;
@@ -18,6 +18,26 @@ export default function SkillsClient({ skills }: SkillsClientProps) {
       newExpanded.add(section);
     }
     setExpandedSections(newExpanded);
+  };
+
+  const getCategoryDisplayName = (category: string): string => {
+    const categoryMap: { [key: string]: string } = {
+      'computing': 'コンピューティング',
+      'storage': 'ストレージ',
+      'database': 'データベース',
+      'networkingAndContentDelivery': 'ネットワーキング&コンテンツ配信',
+      'securityIdentityCompliance': 'セキュリティ・アイデンティティ・コンプライアンス',
+      'managementGovernance': '管理・ガバナンス',
+      'analytics': '分析',
+      'applicationIntegration': 'アプリケーション統合',
+      'developerTools': '開発者ツール',
+      'multiAccountManagement': 'マルチアカウント管理',
+      'businessApplications': 'ビジネスアプリケーション',
+      'cloudFinancialManagement': 'クラウド財務管理',
+      'mobileWebAppDevelopment': 'モバイル・ウェブアプリ開発',
+      'migrationTransfer': '移行・転送'
+    };
+    return categoryMap[category] || category;
   };
 
   return (
@@ -49,7 +69,7 @@ export default function SkillsClient({ skills }: SkillsClientProps) {
               <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                 {Object.entries(skills.aws).map(([category, skillList]) => (
                   <div key={category} className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-600 rounded-lg p-4 min-h-fit">
-                    <h4 className="font-semibold text-slate-700 dark:text-slate-300 mb-3">{category}</h4>
+                    <h4 className="font-semibold text-slate-700 dark:text-slate-300 mb-3">{getCategoryDisplayName(category)}</h4>
                     <div className="flex flex-wrap gap-2">
                       {skillList.map((skill) => (
                         <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full whitespace-nowrap">

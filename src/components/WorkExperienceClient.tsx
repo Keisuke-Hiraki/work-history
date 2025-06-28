@@ -71,8 +71,10 @@ export default function WorkExperienceClient({ workExperience, companies }: Work
                 </svg>
               </button>
               
-              <div className={`overflow-hidden transition-all duration-300 ${
-                expandedCompanies.has(index) ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              <div className={`transition-all duration-300 ease-in-out ${
+                expandedCompanies.has(index) 
+                  ? 'max-h-[1000px] opacity-100' 
+                  : 'max-h-0 opacity-0 overflow-hidden'
               }`}>
                 <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-700">
                   <div className="text-sm text-slate-600 dark:text-slate-400 mb-4 space-y-1">

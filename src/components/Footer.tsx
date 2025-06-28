@@ -31,7 +31,7 @@ export default function Footer() {
         
         <div className="mt-6 pt-6 border-t border-slate-700 text-center">
           <p className="text-slate-400 text-sm">
-            このサイトは <a href="https://keisuke-hiraki.github.io/work-history/" className="text-blue-400 hover:text-blue-300 underline">GitHub Pages</a> で公開されています。Built with Next.js and Tailwind CSS.
+            このサイトは <a href="https://keisuke-hiraki.github.io/work-history/" className="text-blue-400 hover:text-blue-300 underline">GitHub Pages</a> で公開されています。
           </p>
         </div>
       </div>
