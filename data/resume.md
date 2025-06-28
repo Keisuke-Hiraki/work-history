@@ -1,4 +1,4 @@
-最終更新日: 2025/03/11
+最終更新日: 2025/06/28
 
 # 基本情報
 
@@ -19,7 +19,7 @@
 
 | 期間 | 説明 |
 | --- | --- |
-| 2023年4月〜現在 | クラスメソッド株式会社 |
+| 2023年4月〜2025年6月 | クラスメソッド株式会社 |
 | 2021年1月～2023年3月 | 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア） |
 | 2020年12月 | 静岡大学 工学部 機械工学科（中途退学） |
 
@@ -179,7 +179,7 @@ VPC/CloudFront/Route 53/ELB/Transit Gateway/Direct Connect/Client VPN/Global Acc
 
 #### セキュリティ、アイデンティティ、コンプライアンス
 
-IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS/
+IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS
 
 #### 管理とガバナンス
 
