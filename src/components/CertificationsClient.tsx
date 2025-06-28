@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import type { Certification } from '@/lib/markdownParser';
+import type { Certification } from '@/lib/types';
 import CertificationBadge from './CertificationBadge';
 
 interface CertificationsClientProps {
@@ -11,8 +11,8 @@ interface CertificationsClientProps {
 export default function CertificationsClient({ certifications }: CertificationsClientProps) {
   const [badgeStates, setBadgeStates] = useState<{ [key: number]: boolean }>({});
 
-  const getProviderColor = (provider: string) => {
-    switch (provider) {
+  const getProviderColor = (category: string) => {
+    switch (category) {
       case 'aws':
         return 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-700';
       case 'azure':
@@ -72,7 +72,7 @@ export default function CertificationsClient({ certifications }: CertificationsC
       
       <div className="grid md:grid-cols-2 gap-4">
         {certifications.map((cert, index) => (
-          <div key={index} className={`p-4 rounded-lg border ${getProviderColor(cert.provider)}`}>
+          <div key={index} className={`p-4 rounded-lg border ${getProviderColor(cert.category)}`}>
             <div className={`flex items-start ${badgeStates[index] !== false ? 'gap-4' : 'gap-0'}`}>
               <CertificationBadge 
                 certName={cert.name}
@@ -82,7 +82,7 @@ export default function CertificationsClient({ certifications }: CertificationsC
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2 leading-tight">{cert.name}</h3>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-sm text-slate-600 dark:text-slate-400">{getProviderDisplayName(cert.provider)}</span>
+                  <span className="text-sm text-slate-600 dark:text-slate-400">{getProviderDisplayName(cert.category)}</span>
                   <span className={`px-2 py-1 text-xs rounded ${getLevelBadge(cert.level)}`}>
                     {cert.level}
                   </span>

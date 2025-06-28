@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { Company } from '@/lib/markdownParser';
+import type { Company } from '@/lib/types';
 
 interface WorkExperienceClientProps {
   workExperience: {
@@ -60,7 +60,7 @@ export default function WorkExperienceClient({ workExperience, companies }: Work
                   </p>
                 </div>
                 <svg
-                  className={`w-5 h-5 text-slate-600 dark:text-slate-400 transition-transform ${
+                  className={`w-5 h-5 text-slate-600 dark:text-slate-400 transition-transform duration-200 ${
                     expandedCompanies.has(index) ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -71,7 +71,9 @@ export default function WorkExperienceClient({ workExperience, companies }: Work
                 </svg>
               </button>
               
-              {expandedCompanies.has(index) && (
+              <div className={`overflow-hidden transition-all duration-300 ${
+                expandedCompanies.has(index) ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+              }`}>
                 <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-700">
                   <div className="text-sm text-slate-600 dark:text-slate-400 mb-4 space-y-1">
                     <p><span className="font-medium">事業内容:</span> {company.description}</p>
@@ -149,7 +151,7 @@ export default function WorkExperienceClient({ workExperience, companies }: Work
                     </div>
                   )}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

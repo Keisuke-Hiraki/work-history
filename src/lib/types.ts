@@ -59,8 +59,9 @@ export interface Skills {
 export interface Certification {
   name: string;
   date: string;
-  provider: 'aws' | 'azure' | 'programming';
-  level: 'foundational' | 'associate' | 'professional' | 'specialty' | 'basic';
+  category: string;
+  level: string;
+  provider?: string;
 }
 
 export interface Award {
