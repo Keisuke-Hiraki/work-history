@@ -59,7 +59,7 @@ export interface Skills {
 export interface Certification {
   name: string;
   date: string;
-  provider: 'aws' | 'azure' | 'programming';
+  provider: 'aws' | 'azure' | 'gcp' | 'programming';
   level: 'foundational' | 'associate' | 'professional' | 'specialty' | 'basic';
 }
 
@@ -519,6 +519,7 @@ export class MarkdownParser {
   private determineProvider(name: string): string {
     if (name.includes('AWS')) return 'aws';
     if (name.includes('Azure') || name.includes('Microsoft')) return 'azure';
+    if (name.includes('Google Cloud') || name.includes('GCP')) return 'gcp';
     return 'programming';
   }
 

@@ -11,7 +11,8 @@ interface WorkExperienceClientProps {
 }
 
 export default function WorkExperienceClient({ workExperience, companies }: WorkExperienceClientProps) {
-  const [expandedCompanies, setExpandedCompanies] = useState<Set<number>>(new Set());
+  // 最初の会社（最新の勤務先）をデフォルトで展開
+  const [expandedCompanies, setExpandedCompanies] = useState<Set<number>>(new Set([0]));
 
   const toggleCompany = (index: number) => {
     const newExpanded = new Set(expandedCompanies);
