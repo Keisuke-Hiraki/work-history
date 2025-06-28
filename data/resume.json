@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-03-11",
+  "lastUpdated": "2025-06-28",
   "basicInfo": {
     "name": {
       "ja": "平木 佳介",
@@ -35,23 +35,13 @@
       "name": "SpeakerDeck",
       "url": "https://speakerdeck.com/khiraki",
       "type": "presentation"
-    },
-    {
-      "name": "Credly",
-      "url": "https://www.credly.com/users/keisuke-hiraki",
-      "type": "certification"
-    },
-    {
-      "name": "Qiita",
-      "url": "https://qiita.com/HIRA_dayo",
-      "type": "blog"
     }
   ],
   "careerSummary": [
     {
-      "period": "2023年4月〜現在",
+      "period": "2023年4月〜2025年6月",
       "company": "クラスメソッド株式会社",
-      "status": "current"
+      "status": "past"
     },
     {
       "period": "2021年1月～2023年3月",
@@ -61,7 +51,7 @@
     {
       "period": "2020年12月",
       "company": "静岡大学 工学部 機械工学科（中途退学）",
-      "status": "education"
+      "status": "past"
     }
   ],
   "workExperience": {
@@ -75,303 +65,13 @@
         "ブロックチェーン技術に基づくAWSインフラの設計構築支援"
       ]
     },
-    "companies": [
-      {
-        "name": "クラスメソッド株式会社",
-        "businessDescription": "クラウド（AWS等）の技術コンサルティング、開発等",
-        "employees": "約780名（2024年7月現在、グループ全体）",
-        "period": {
-          "start": "2023年4月",
-          "end": "現在"
-        },
-        "employmentType": "正社員",
-        "projects": [
-          {
-            "title": "AWS運用支援",
-            "overview": "CCoEチーム発足に伴うAWS運用支援",
-            "period": {
-              "start": "2023年10月",
-              "end": "現在"
-            },
-            "role": "ソリューションアーキテクト",
-            "responsibilities": [
-              "コンサルティング"
-            ],
-            "technologies": {
-              "infrastructure": ["AWS"]
-            },
-            "tasks": [
-              "全社AWS利用標準化に伴うガイドラインの更新支援",
-              "Organizationsを活用しないマルチアカウントのセキュリティ・ユーザー・ネットワークの統制管理環境の設計",
-              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）",
-              "セキュリティ運用効率化に伴うロジックの導入支援"
-            ]
-          },
-          {
-            "title": "技術アドバイザー",
-            "overview": "テクニカルアカウントマネージャー（以下、TAM）相当の顧客支援",
-            "period": {
-              "start": "2023年6月",
-              "end": "現在"
-            },
-            "role": "ソリューションアーキテクト",
-            "responsibilities": [
-              "コンサルティング"
-            ],
-            "technologies": {
-              "infrastructure": ["AWS"]
-            },
-            "tasks": [
-              "顧客のAWS環境における技術課題の解決",
-              "顧客サービスにおけるメール機能実装におけるQA支援",
-              "SPA構築に伴う設計支援",
-              "開発環境のCI/CDソリューション設計",
-              "定期的なAWSサービスのプライベート勉強会の開催"
-            ]
-          },
-          {
-            "title": "AWS利用ガイドライン策定支援・アカウント/セキュリティ導入支援",
-            "overview": "データ分析基盤のAWS環境への移行に伴うAWS利用ガイドラインの策定およびアカウント/セキュリティの設計支援",
-            "period": {
-              "start": "2023年5月",
-              "end": "2024年1月"
-            },
-            "role": "ソリューションアーキテクト",
-            "responsibilities": [
-              "コンサルティング"
-            ],
-            "technologies": {
-              "infrastructure": ["AWS"]
-            },
-            "tasks": [
-              "個人情報の取り扱いに準じたセキュリティを担保するソリューションの設計構築",
-              "Control Tower,Organizationsを活用したベストプラクティスなアカウント設計構築",
-              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）"
-            ]
-          }
-        ],
-        "additionalActivities": [
-          "プリセールス",
-          "技術相談会",
-          "コスト最適化アセスメント",
-          "セキュリティアセスメント",
-          "マルチアカウント運用効率化支援"
-        ]
-      },
-      {
-        "name": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
-        "businessDescription": "エンジニア派遣事業",
-        "employees": "3642名（2021年6月時点）",
-        "period": {
-          "start": "2021年1月",
-          "end": "2023年3月"
-        },
-        "employmentType": "正社員",
-        "projects": [
-          {
-            "title": "決済代行システム AWS基盤運用案件",
-            "overview": "決済代行システム基盤の AWS への移行、構築運用",
-            "period": {
-              "start": "2022年1月",
-              "end": "2023年3月"
-            },
-            "role": "AWSエンジニア",
-            "responsibilities": [
-              "システム移行",
-              "構築運用業務"
-            ],
-            "technologies": {
-              "infrastructure": ["AWS", "シェルスクリプト", "SQL"],
-              "serverSide": ["Python"]
-            },
-            "tasks": [
-              "AWSリソース全般の障害調査担当",
-              "PCIDSSに準拠したコンポーネントの設定の調査",
-              "マルチアカウント環境下でのスイッチロール作業",
-              "IDS/IPSの導入(Tripwire)",
-              "運用改善に向けたタスク自動化（PowerAutomate等）の導入",
-              "CloudFormationによるインフラ基盤のIaC化",
-              "新機能リリースに伴うAWSリソースの構築"
-            ]
-          },
-          {
-            "title": "金融系EDIシステム 設計構築案件",
-            "overview": "金融系EDIサービスインフラ基盤の詳細設計、構築",
-            "period": {
-              "start": "2021年8月",
-              "end": "2021年12月"
-            },
-            "role": "AWSエンジニア",
-            "responsibilities": [
-              "設計構築"
-            ],
-            "technologies": {
-              "infrastructure": ["AWS"],
-              "serverSide": ["Python"]
-            },
-            "tasks": [
-              "AWSネットワークリソース全般の設計の提案構築を担当",
-              "PCIDSSに準拠したコンポーネントの選定や設定の調査",
-              "DR対策のためのF/OのLambdaによる自動化機能を構築",
-              "マルチアカウント環境下でのスイッチロール作業",
-              "CloudFormationによるインフラ基盤のIaC化"
-            ]
-          }
-        ]
-      }
-    ]
+    "companies": []
   },
   "skills": {
-    "aws": {
-      "computing": [
-        "EC2",
-        "Lambda",
-        "ECS",
-        "Fargate",
-        "EC2 Auto Scaling",
-        "Lightsail",
-        "Compute Optimizer"
-      ],
-      "storage": [
-        "S3",
-        "EBS",
-        "EFS",
-        "Backup"
-      ],
-      "database": [
-        "RDS(MySQL,PostgreSQL,Aurora)",
-        "DynamoDB",
-        "Redshift",
-        "ElastiCache"
-      ],
-      "networkingAndContentDelivery": [
-        "VPC",
-        "CloudFront",
-        "Route 53",
-        "ELB",
-        "Transit Gateway",
-        "Direct Connect",
-        "Client VPN",
-        "Global Accelerator",
-        "PrivateLink"
-      ],
-      "securityIdentityCompliance": [
-        "IAM",
-        "Cognito",
-        "Security Hub",
-        "GuardDuty",
-        "Detective",
-        "IAM Access Analyzer",
-        "Inspector",
-        "WAF",
-        "Shield Advanced",
-        "Network Firewall",
-        "Security Lake",
-        "AWS Certificate Manager",
-        "KMS"
-      ],
-      "managementGovernance": [
-        "CloudWatch",
-        "CloudFormation",
-        "CloudTrail",
-        "Config",
-        "Organizations",
-        "Control Tower",
-        "Trusted Advisor",
-        "Systems Manager"
-      ],
-      "analytics": [
-        "Athena",
-        "Glue",
-        "OpenSearch Service"
-      ],
-      "applicationIntegration": [
-        "SNS",
-        "SQS",
-        "Step Functions",
-        "Data Firehose",
-        "EventBridge"
-      ],
-      "developerTools": [
-        "CodePipeline",
-        "CodeBuild",
-        "CodeDeploy",
-        "CodeCommit",
-        "CloudShell",
-        "Cloud9",
-        "AWS CLI",
-        "AWS SDK"
-      ],
-      "multiAccountManagement": [
-        "Organizations",
-        "Control Tower",
-        "IAM Identity Center(旧AWS SSO)",
-        "RAM"
-      ],
-      "businessApplications": [
-        "Amazon Connect"
-      ],
-      "cloudFinancialManagement": [
-        "Budgets",
-        "Cost and Usage Report",
-        "Cost Explorer",
-        "RI・SP"
-      ],
-      "mobileWebAppDevelopment": [
-        "API Gateway",
-        "SES"
-      ],
-      "migrationTransfer": [
-        "DMS",
-        "DataSync",
-        "Transfer Family"
-      ]
-    },
-    "iac": [
-      "Terraform",
-      "CloudFormation",
-      "Pulumi"
-    ],
-    "os": [
-      "Linux",
-      "Windows"
-    ],
-    "saas": {
-      "microsoft": [
-        "Outlook",
-        "Excel",
-        "OneDrive",
-        "PowerAutomate",
-        "Teams",
-        "SharePoint"
-      ],
-      "google": [
-        "Gmail",
-        "Slide",
-        "Calendar",
-        "Drive",
-        "Spreadsheet",
-        "Docs",
-        "GAS",
-        "Meet"
-      ],
-      "communication": [
-        "Slack",
-        "Tocaro",
-        "Box",
-        "Zoom",
-        "Webex",
-        "Ovice"
-      ],
-      "projectManagement": [
-        "Backlog",
-        "Jira",
-        "HubSpot"
-      ],
-      "development": [
-        "GitHub"
-      ]
-    }
+    "aws": {},
+    "iac": [],
+    "os": [],
+    "saas": {}
   },
   "certifications": [
     {
@@ -488,54 +188,15 @@
       "name": "Japan AWS All Certifications Engineers",
       "year": "2024",
       "url": "https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/",
-      "category": "certification"
+      "category": "community"
     }
   ],
   "personalActivities": {
-    "speaking": [
-      {
-        "event": "JAWS ミート 2024",
-        "eventUrl": "https://jaws-ug-tokaido.connpass.com/event/315732/",
-        "title": "踏み台の運用が変わる？ VPC上で起動できるようになったCloudShellを語る",
-        "slideUrl": "https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru"
-      },
-      {
-        "event": "オフライン世界最速？AWS re:Inforce 2024 re:Cap セミナー",
-        "eventUrl": "https://classmethod.connpass.com/event/320489/",
-        "title": "IAM Access Analyzer のアップデートを語ります",
-        "slideUrl": "https://speakerdeck.com/khiraki/iam-access-analyzernoatupudetowoyu-rimasu"
-      },
-      {
-        "event": "まるクラ勉強会 ONLINE #02 - AWS&Google Cloudの環境分離戦略編 -",
-        "eventUrl": "https://classmethod.connpass.com/event/313913/",
-        "title": "組織におけるAWSネットワーク集約王者決定戦",
-        "slideUrl": "https://speakerdeck.com/khiraki/zu-zhi-niokeruawsnetutowakuji-yue-wang-zhe-jue-ding-zhan"
-      },
-      {
-        "event": "Hibiya.Tech #4「初心者歓迎！使ってみた技術LT大会」",
-        "eventUrl": "https://classmethod.connpass.com/event/311851/",
-        "title": "速さの鍵を握る! Fastly で実現する CDN の力",
-        "slideUrl": "https://speakerdeck.com/khiraki/su-sanojian-wowo-ru-fastly-deshi-xian-suru-cdn-noli"
-      },
-      {
-        "event": "AWS cafeteria #1　〜サイバーエージェント×ゆめみ×クラスメソッド 3社共催LT会〜",
-        "eventUrl": "https://cyberagent.connpass.com/event/303690/",
-        "title": "クラウドの落とし穴：AWS Backupで発生した高額請求の衝撃とその教訓",
-        "slideUrl": "https://speakerdeck.com/khiraki/kuraudonoluo-tosixue-aws-backupdefa-sheng-sitagao-e-qing-qiu-nochong-ji-tosonojiao-xun"
-      },
-      {
-        "event": "DevelopersIO 2023",
-        "eventUrl": "https://event.classmethod.jp/developers-io/2023",
-        "title": "AIと一緒に音楽を作ろう ～作曲体験セッション～",
-        "slideUrl": "https://speakerdeck.com/khiraki/aito-xu-niyin-le-wozuo-rou-zuo-qu-ti-yan-setusiyon-developersio-2023"
-      }
-    ],
+    "speaking": [],
     "eventOrganizing": [
       {
         "event": "AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜",
-        "eventUrl": "https://classmethod.connpass.com/event/318667/",
-        "reportUrl": "https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/",
-        "reportTitle": "AWS cafeteria #2　〜チーム対抗！みんなで最強の AWS アーキテクチャを考えよう！〜 を開催しました！"
+        "eventUrl": "https://classmethod.connpass.com/event/318667/"
       }
     ]
   }
