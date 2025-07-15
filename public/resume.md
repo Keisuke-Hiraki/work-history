@@ -9,6 +9,8 @@
 
 # アカウント
 
+- [Qiita](https://qiita.com/HIRA_dayo)
+- [Zenn](https://zenn.dev/khirasan)
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [LinkedIn](https://www.linkedin.com/in/k-hiraki/)
 - [X(旧Twitter)](https://x.com/k_hirasan)
@@ -262,14 +264,15 @@ Linux/Windows
 | 名前 | 年 |
 | --- | --- |
 | [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2025 |
-| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 |
+| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024,2025 |
 
 ## 個人活動
 
 ### ブログ
 
-- [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [Qiita](https://qiita.com/HIRA_dayo)
+- [Zenn](https://zenn.dev/khirasan)
+- [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 
 ### 登壇
 
