@@ -1,4 +1,4 @@
-最終更新日: 2025/03/11
+最終更新日: 2025/06/28
 
 # 基本情報
 
@@ -9,8 +9,6 @@
 
 # アカウント
 
-- [Qiita](https://qiita.com/HIRA_dayo)
-- [Zenn](https://zenn.dev/khirasan)
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [LinkedIn](https://www.linkedin.com/in/k-hiraki/)
 - [X(旧Twitter)](https://x.com/k_hirasan)
@@ -21,7 +19,8 @@
 
 | 期間 | 説明 |
 | --- | --- |
-| 2023年4月〜現在 | クラスメソッド株式会社 |
+| 2025年7月～現在 | 株式会社サイバーセキュリティクラウド |
+| 2023年4月〜2025年6月 | クラスメソッド株式会社 |
 | 2021年1月～2023年3月 | 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア） |
 | 2020年12月 | 静岡大学 工学部 機械工学科（中途退学） |
 
@@ -181,7 +180,7 @@ VPC/CloudFront/Route 53/ELB/Transit Gateway/Direct Connect/Client VPN/Global Acc
 
 #### セキュリティ、アイデンティティ、コンプライアンス
 
-IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS/
+IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS
 
 #### 管理とガバナンス
 
@@ -264,15 +263,14 @@ Linux/Windows
 | 名前 | 年 |
 | --- | --- |
 | [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2025 |
-| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024,2025 |
+| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 |
 
 ## 個人活動
 
 ### ブログ
 
-- [Qiita](https://qiita.com/HIRA_dayo)
-- [Zenn](https://zenn.dev/khirasan)
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
+- [Qiita](https://qiita.com/HIRA_dayo)
 
 ### 登壇
 

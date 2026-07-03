@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Shippori_Mincho, Zen_Kaku_Gothic_New, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import DarkModeScript from "@/components/DarkModeScript";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const shipporiMincho = Shippori_Mincho({
+  variable: "--font-shippori-mincho",
   subsets: ["latin"],
+  weight: ["500", "600"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const zenKaku = Zen_Kaku_Gothic_New({
+  variable: "--font-zen-kaku",
   subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +69,7 @@ export default function RootLayout({
         <DarkModeScript />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors`}
+        className={`${shipporiMincho.variable} ${zenKaku.variable} ${plexMono.variable} antialiased transition-colors`}
       >
         {children}
       </body>

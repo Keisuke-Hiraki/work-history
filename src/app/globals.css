@@ -1,28 +1,78 @@
 @import "tailwindcss";
 
-@config "../../tailwind.config.js";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #FAF9F5;
+  --ink: #1A1915;
+  --ink-muted: #6B675E;
+  --rule: #E8E6DE;
+  --accent: #9E3B2F;
+}
+
+.dark {
+  --paper: #171613;
+  --ink: #ECEAE3;
+  --ink-muted: #A29D92;
+  --rule: #2E2C27;
+  --accent: #C96A55;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --font-heading: var(--font-shippori-mincho), "Hiragino Mincho ProN", serif;
+  --font-sans: var(--font-zen-kaku), "Hiragino Sans", sans-serif;
+  --font-mono: var(--font-plex-mono), "SFMono-Regular", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-feature-settings: "palt";
+}
+
+@media print {
+  :root,
+  .dark {
+    --paper: #ffffff;
+    --ink: #000000;
+    --ink-muted: #444444;
+    --rule: #cccccc;
+  }
+
+  @page {
+    margin: 14mm;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-size: 10.5pt;
+  }
+
+  main {
+    max-width: none !important;
+  }
+
+  h2, h3 {
+    break-after: avoid;
+  }
+
+  [data-print-avoid-break] {
+    break-inside: avoid;
+  }
 }

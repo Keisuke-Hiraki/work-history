@@ -654,6 +654,7 @@ function syncResumeData() {
     const projectRoot = path.join(__dirname, '..');
     const mdPath = path.join(projectRoot, 'data', 'resume.md');
     const jsonPath = path.join(projectRoot, 'data', 'resume.json');
+    const publicMdPath = path.join(projectRoot, 'public', 'resume.md');
 
     // Read markdown file
     if (!fs.existsSync(mdPath)) {
@@ -662,17 +663,21 @@ function syncResumeData() {
     }
 
     const mdContent = fs.readFileSync(mdPath, 'utf8');
-    
+
     // Parse markdown
     const parser = new ResumeMarkdownParser(mdContent);
     const resumeData = parser.parse();
 
     // Write JSON file
     fs.writeFileSync(jsonPath, JSON.stringify(resumeData, null, 2) + '\n');
-    
+
+    // Copy markdown source to public/ so the site can link to it directly for download
+    fs.copyFileSync(mdPath, publicMdPath);
+
     console.log('✅ Resume data synchronized successfully!');
     console.log(`📄 Source: ${mdPath}`);
     console.log(`📄 Target: ${jsonPath}`);
+    console.log(`📄 Public copy: ${publicMdPath}`);
     console.log(`📅 Last updated: ${resumeData.lastUpdated}`);
     
   } catch (error) {

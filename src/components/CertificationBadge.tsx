@@ -31,7 +31,7 @@ export default function CertificationBadge({ certName, badgeImageSrc, onImageLoa
       <img
         src={badgeImageSrc}
         alt={`${certName} バッジ`}
-        className="w-16 h-16 object-contain rounded-lg bg-white dark:bg-slate-800 p-1"
+        className="h-14 w-14 rounded-[3px] object-contain"
         onError={handleImageError}
         onLoad={handleImageSuccess}
       />

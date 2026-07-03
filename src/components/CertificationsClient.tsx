@@ -11,19 +11,6 @@ interface CertificationsClientProps {
 export default function CertificationsClient({ certifications }: CertificationsClientProps) {
   const [badgeStates, setBadgeStates] = useState<{ [key: number]: boolean }>({});
 
-  const getProviderColor = (category: string) => {
-    switch (category) {
-      case 'aws':
-        return 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-700';
-      case 'azure':
-        return 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700';
-      case 'gcp':
-        return 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-700';
-      default:
-        return 'bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600';
-    }
-  };
-
   const getProviderDisplayName = (provider: string) => {
     switch (provider) {
       case 'aws':
@@ -37,18 +24,6 @@ export default function CertificationsClient({ certifications }: CertificationsC
     }
   };
 
-  const getLevelBadge = (level: string) => {
-    const levelColors = {
-      foundational: 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200',
-      associate: 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200',
-      professional: 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200',
-      specialty: 'bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200',
-      basic: 'bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200'
-    };
-
-    return levelColors[level as keyof typeof levelColors] || levelColors.basic;
-  };
-
   const getCertificationBadgeImage = (certName: string) => {
     // 資格名から画像ファイル名を生成（スペースや特殊文字を除去し、小文字に変換）
     const fileName = certName
@@ -57,7 +32,7 @@ export default function CertificationsClient({ certifications }: CertificationsC
       .replace(/[^a-z0-9-]/g, '')
       .replace(/-+/g, '-')
       .replace(/^-|-$/g, '');
-    
+
     const basePath = process.env.NODE_ENV === 'production' ? '/work-history' : '';
     return `${basePath}/${fileName}.png`;
   };
@@ -67,38 +42,43 @@ export default function CertificationsClient({ certifications }: CertificationsC
   }, []);
 
   return (
-    <section id="certifications" className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">保有資格</h2>
-      
-      <div className="grid md:grid-cols-2 gap-4">
+    <section id="certifications" className="scroll-mt-16 border-t border-rule py-16">
+      <h2 className="font-heading text-2xl text-ink">保有資格</h2>
+
+      <div className="mt-8 divide-y divide-rule">
         {certifications.map((cert, index) => (
-          <div key={index} className={`p-4 rounded-lg border ${getProviderColor(cert.category)}`}>
-            <div className={`flex items-start ${badgeStates[index] !== false ? 'gap-4' : 'gap-0'}`}>
-              <CertificationBadge 
-                certName={cert.name}
-                badgeImageSrc={getCertificationBadgeImage(cert.name)}
-                onImageLoad={(hasImage) => handleBadgeLoad(index, hasImage)}
-              />
-              <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-2 leading-tight">{cert.name}</h3>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-sm text-slate-600 dark:text-slate-400">{getProviderDisplayName(cert.category)}</span>
-                  <span className={`px-2 py-1 text-xs rounded ${getLevelBadge(cert.level)}`}>
-                    {cert.level}
-                  </span>
-                </div>
-                <span className="text-sm font-medium text-slate-600 dark:text-slate-400">{cert.date}</span>
+          <div
+            key={index}
+            data-print-avoid-break
+            className={`flex items-start py-4 ${badgeStates[index] !== false ? 'gap-4' : 'gap-0'}`}
+          >
+            <CertificationBadge
+              certName={cert.name}
+              badgeImageSrc={getCertificationBadgeImage(cert.name)}
+              onImageLoad={(hasImage) => handleBadgeLoad(index, hasImage)}
+            />
+            <div className="min-w-0 flex-1">
+              <h3 className="leading-tight text-ink">{cert.name}</h3>
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-3 font-mono text-xs text-ink-muted">
+                <span>{getProviderDisplayName(cert.category)}</span>
+                <span>[{cert.level}]</span>
+                <span>{cert.date}</span>
               </div>
             </div>
           </div>
         ))}
       </div>
-      
-      <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-        <p className="text-sm text-slate-600 dark:text-slate-300">
-          最新の資格情報は <a href="https://www.credly.com/users/keisuke-hiraki" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline">Credly</a> をご参照ください。
-        </p>
-      </div>
+
+      <p className="mt-8 text-sm text-ink-muted">
+        最新の資格情報は{' '}
+        <a
+          href="https://www.credly.com/users/keisuke-hiraki"
+          className="text-accent underline decoration-rule underline-offset-4 hover:decoration-accent"
+        >
+          Credly
+        </a>{' '}
+        をご参照ください。
+      </p>
     </section>
   );
 }
