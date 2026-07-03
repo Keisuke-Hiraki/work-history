@@ -3,30 +3,33 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --paper: #FAF9F5;
-  --ink: #1A1915;
-  --ink-muted: #6B675E;
-  --rule: #E8E6DE;
-  --accent: #9E3B2F;
+  --canvas: #FAFAFB;
+  --surface: #FFFFFF;
+  --ink: #18181B;
+  --muted: #6E6E78;
+  --line: #E7E7EC;
+  --accent: #2B4EE6;
 }
 
 .dark {
-  --paper: #171613;
-  --ink: #ECEAE3;
-  --ink-muted: #A29D92;
-  --rule: #2E2C27;
-  --accent: #C96A55;
+  --canvas: #0B1220;
+  --surface: #121A2E;
+  --ink: #E2E8F0;
+  --muted: #94A3B8;
+  --line: #243044;
+  --accent: #8FA8FF;
 }
 
 @theme inline {
-  --color-paper: var(--paper);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
   --color-ink: var(--ink);
-  --color-ink-muted: var(--ink-muted);
-  --color-rule: var(--rule);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
   --color-accent: var(--accent);
-  --font-heading: var(--font-shippori-mincho), "Hiragino Mincho ProN", serif;
-  --font-sans: var(--font-zen-kaku), "Hiragino Sans", sans-serif;
-  --font-mono: var(--font-plex-mono), "SFMono-Regular", monospace;
+  --font-sans: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
+  --font-display: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "SFMono-Regular", monospace;
 }
 
 html {
@@ -34,22 +37,20 @@ html {
 }
 
 body {
-  background: var(--paper);
+  background: var(--canvas);
   color: var(--ink);
   font-family: var(--font-sans);
-}
-
-h1, h2, h3, h4 {
-  font-feature-settings: "palt";
 }
 
 @media print {
   :root,
   .dark {
-    --paper: #ffffff;
+    --canvas: #ffffff;
+    --surface: #ffffff;
     --ink: #000000;
-    --ink-muted: #444444;
-    --rule: #cccccc;
+    --muted: #444444;
+    --line: #cccccc;
+    --accent: #1a3ab8;
   }
 
   @page {

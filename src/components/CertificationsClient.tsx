@@ -3,10 +3,19 @@
 import { useState, useCallback } from 'react';
 import type { Certification } from '@/lib/types';
 import CertificationBadge from './CertificationBadge';
+import SectionHeading from './SectionHeading';
 
 interface CertificationsClientProps {
   certifications: Certification[];
 }
+
+const LEVEL_STYLES: { [key: string]: string } = {
+  foundational: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
+  associate: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
+  professional: 'bg-violet-500/10 text-violet-600 dark:text-violet-400',
+  specialty: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
+  basic: 'bg-zinc-500/10 text-zinc-600 dark:text-zinc-400',
+};
 
 export default function CertificationsClient({ certifications }: CertificationsClientProps) {
   const [badgeStates, setBadgeStates] = useState<{ [key: number]: boolean }>({});
@@ -42,15 +51,17 @@ export default function CertificationsClient({ certifications }: CertificationsC
   }, []);
 
   return (
-    <section id="certifications" className="scroll-mt-16 border-t border-rule py-16">
-      <h2 className="font-heading text-2xl text-ink">保有資格</h2>
+    <section id="certifications" className="scroll-mt-16 py-14">
+      <SectionHeading eyebrow="Certifications" title="保有資格" />
 
-      <div className="mt-8 divide-y divide-rule">
+      <div className="mt-8 grid gap-4 md:grid-cols-2">
         {certifications.map((cert, index) => (
           <div
             key={index}
             data-print-avoid-break
-            className={`flex items-start py-4 ${badgeStates[index] !== false ? 'gap-4' : 'gap-0'}`}
+            className={`flex items-start rounded-xl border border-line bg-surface p-4 shadow-sm ${
+              badgeStates[index] !== false ? 'gap-4' : 'gap-0'
+            }`}
           >
             <CertificationBadge
               certName={cert.name}
@@ -58,22 +69,29 @@ export default function CertificationsClient({ certifications }: CertificationsC
               onImageLoad={(hasImage) => handleBadgeLoad(index, hasImage)}
             />
             <div className="min-w-0 flex-1">
-              <h3 className="leading-tight text-ink">{cert.name}</h3>
-              <div className="mt-1.5 flex flex-wrap items-center gap-x-3 font-mono text-xs text-ink-muted">
-                <span>{getProviderDisplayName(cert.category)}</span>
-                <span>[{cert.level}]</span>
-                <span>{cert.date}</span>
+              <h3 className="text-sm font-medium leading-snug text-ink">{cert.name}</h3>
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                <span
+                  className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                    LEVEL_STYLES[cert.level] || LEVEL_STYLES.basic
+                  }`}
+                >
+                  {cert.level}
+                </span>
+                <span className="font-mono text-xs text-muted">
+                  {getProviderDisplayName(cert.category)} ・ {cert.date}
+                </span>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-ink-muted">
+      <p className="mt-6 text-sm text-muted">
         最新の資格情報は{' '}
         <a
           href="https://www.credly.com/users/keisuke-hiraki"
-          className="text-accent underline decoration-rule underline-offset-4 hover:decoration-accent"
+          className="text-accent hover:underline"
         >
           Credly
         </a>{' '}

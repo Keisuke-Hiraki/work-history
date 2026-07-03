@@ -1,4 +1,5 @@
 import { getResumeData } from '@/lib/resumeData';
+import SectionHeading from './SectionHeading';
 
 const CATEGORY_DISPLAY_NAMES: { [key: string]: string } = {
   computing: 'コンピューティング',
@@ -21,11 +22,24 @@ function getCategoryDisplayName(category: string): string {
   return CATEGORY_DISPLAY_NAMES[category] || category;
 }
 
-function SkillTag({ children }: { children: string }) {
+function SkillChip({ children }: { children: string }) {
   return (
-    <span className="whitespace-nowrap rounded-[3px] border border-rule px-2 py-0.5 font-mono text-xs text-ink-muted">
+    <span className="whitespace-nowrap rounded-md border border-line bg-canvas px-2 py-0.5 font-mono text-xs text-muted">
       {children}
     </span>
+  );
+}
+
+function SkillGroup({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-xl border border-line bg-surface p-5 shadow-sm">
+      <h4 className="text-sm font-medium text-ink">{title}</h4>
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {items.map((item) => (
+          <SkillChip key={item}>{item}</SkillChip>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -34,70 +48,27 @@ export default function Skills() {
   const { skills } = resumeData;
 
   return (
-    <section id="skills" className="scroll-mt-16 border-t border-rule py-16">
-      <h2 className="font-heading text-2xl text-ink">スキル・経験</h2>
+    <section id="skills" className="scroll-mt-16 py-14">
+      <SectionHeading eyebrow="Skills" title="スキル・経験" />
 
-      <div className="mt-10">
-        <h3 className="font-heading text-lg text-ink">AWS</h3>
-        <div className="mt-6 space-y-6">
-          {Object.entries(skills.aws).map(([category, skillList]) => (
-            <div key={category}>
-              <h4 className="font-mono text-xs text-ink-muted">
-                {getCategoryDisplayName(category)}
-              </h4>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skillList.map((skill) => (
-                  <SkillTag key={skill}>{skill}</SkillTag>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+      <h3 className="mt-8 text-xs font-medium uppercase tracking-wide text-muted/70">AWS</h3>
+      <div className="mt-3 grid gap-4 md:grid-cols-2">
+        {Object.entries(skills.aws).map(([category, skillList]) => (
+          <SkillGroup
+            key={category}
+            title={getCategoryDisplayName(category)}
+            items={skillList}
+          />
+        ))}
       </div>
 
-      <div className="mt-12">
-        <h3 className="font-heading text-lg text-ink">その他の技術</h3>
-        <div className="mt-6 space-y-6">
-          {skills.iac.length > 0 && (
-            <div>
-              <h4 className="font-mono text-xs text-ink-muted">IaC</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skills.iac.map((tech) => (
-                  <SkillTag key={tech}>{tech}</SkillTag>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {skills.os.length > 0 && (
-            <div>
-              <h4 className="font-mono text-xs text-ink-muted">OS</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
-                {skills.os.map((os) => (
-                  <SkillTag key={os}>{os}</SkillTag>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {Object.keys(skills.saas).length > 0 && (
-            <div>
-              <h4 className="font-mono text-xs text-ink-muted">SaaS</h4>
-              <div className="mt-3 space-y-3">
-                {Object.entries(skills.saas).map(([vendor, tools]) => (
-                  <div key={vendor} className="flex flex-col gap-2 md:flex-row md:items-start md:gap-4">
-                    <span className="shrink-0 text-sm text-ink-muted md:w-32">{vendor}</span>
-                    <div className="flex flex-wrap gap-2">
-                      {tools.map((tool) => (
-                        <SkillTag key={tool}>{tool}</SkillTag>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+      <h3 className="mt-10 text-xs font-medium uppercase tracking-wide text-muted/70">その他の技術</h3>
+      <div className="mt-3 grid gap-4 md:grid-cols-2">
+        {skills.iac.length > 0 && <SkillGroup title="IaC" items={skills.iac} />}
+        {skills.os.length > 0 && <SkillGroup title="OS" items={skills.os} />}
+        {Object.entries(skills.saas).map(([vendor, tools]) => (
+          <SkillGroup key={vendor} title={`SaaS — ${vendor}`} items={tools} />
+        ))}
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="text-ink-muted transition-colors hover:text-accent"
+      className="rounded-md border border-line p-1.5 text-muted transition-colors hover:border-accent hover:text-accent"
       aria-label="ダークモード切り替え"
     >
       {isDarkMode ? (

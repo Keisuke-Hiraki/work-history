@@ -12,26 +12,28 @@ export default function Header() {
   const resumeMdHref = `${process.env.NODE_ENV === 'production' ? '/work-history' : ''}/resume.md`;
 
   return (
-    <header className="print:hidden sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 overflow-x-auto px-6 py-4">
-        <span className="shrink-0 font-heading text-lg text-ink">平木 佳介</span>
+    <header className="print:hidden sticky top-0 z-50 border-b border-line bg-canvas/80 backdrop-blur">
+      <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 overflow-x-auto px-6 py-3">
+        <a href="#personal" className="shrink-0 font-display text-sm font-bold tracking-tight text-ink">
+          Keisuke Hiraki
+        </a>
 
-        <div className="flex shrink-0 items-center gap-6">
-          <nav className="flex gap-5 text-sm text-ink-muted">
+        <div className="flex shrink-0 items-center gap-5">
+          <nav className="flex gap-4 text-sm text-muted">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="whitespace-nowrap transition-colors hover:text-accent"
+                className="whitespace-nowrap transition-colors hover:text-ink"
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-4 border-l border-rule pl-4">
+          <div className="flex items-center gap-3 border-l border-line pl-4">
             <a
               href={resumeMdHref}
-              className="whitespace-nowrap text-sm text-ink-muted transition-colors hover:text-accent"
+              className="whitespace-nowrap text-sm text-muted transition-colors hover:text-ink"
             >
               Markdown
             </a>

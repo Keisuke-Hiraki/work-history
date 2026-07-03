@@ -10,10 +10,10 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-paper">
+    <div className="min-h-screen bg-canvas">
       <Header />
 
-      <main className="mx-auto max-w-2xl px-6">
+      <main className="mx-auto max-w-4xl px-6">
         <PersonalInfo />
         <CareerSummary />
         <WorkExperience />

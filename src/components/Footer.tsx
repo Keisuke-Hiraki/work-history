@@ -1,17 +1,13 @@
 import { getResumeData } from '@/lib/resumeData';
-import Seal from './Seal';
 
 export default function Footer() {
   const resumeData = getResumeData();
   const { lastUpdated, socialLinks } = resumeData;
 
   return (
-    <footer className="print:hidden mx-auto max-w-2xl border-t border-rule px-6 py-12">
-      <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-        <div className="flex items-center gap-3">
-          <Seal size="sm" />
-          <p className="font-mono text-xs text-ink-muted">最終更新日: {lastUpdated}</p>
-        </div>
+    <footer className="print:hidden border-t border-line">
+      <div className="mx-auto flex max-w-4xl flex-col items-start justify-between gap-6 px-6 py-10 md:flex-row md:items-center">
+        <p className="font-mono text-xs text-muted">最終更新日: {lastUpdated}</p>
 
         <div className="flex flex-wrap gap-x-5 gap-y-2">
           {socialLinks.slice(0, 4).map((link, index) => (
@@ -20,7 +16,7 @@ export default function Footer() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-ink-muted transition-colors hover:text-accent"
+              className="text-sm text-muted transition-colors hover:text-ink"
             >
               {link.name}
             </a>
@@ -28,16 +24,18 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="mt-8 text-xs text-ink-muted">
-        このサイトは{' '}
-        <a
-          href="https://keisuke-hiraki.github.io/work-history/"
-          className="underline decoration-rule underline-offset-2 hover:text-accent"
-        >
-          GitHub Pages
-        </a>{' '}
-        で公開されています。
-      </p>
+      <div className="mx-auto max-w-4xl px-6 pb-8">
+        <p className="text-xs text-muted">
+          このサイトは{' '}
+          <a
+            href="https://keisuke-hiraki.github.io/work-history/"
+            className="text-accent hover:underline"
+          >
+            GitHub Pages
+          </a>{' '}
+          で公開されています。
+        </p>
+      </div>
     </footer>
   );
 }

@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
-import { Shippori_Mincho, Zen_Kaku_Gothic_New, IBM_Plex_Mono } from "next/font/google";
+import { Inter, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import DarkModeScript from "@/components/DarkModeScript";
 
-const shipporiMincho = Shippori_Mincho({
-  variable: "--font-shippori-mincho",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
-const zenKaku = Zen_Kaku_Gothic_New({
-  variable: "--font-zen-kaku",
+const notoSansJp = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",
@@ -69,7 +69,7 @@ export default function RootLayout({
         <DarkModeScript />
       </head>
       <body
-        className={`${shipporiMincho.variable} ${zenKaku.variable} ${plexMono.variable} antialiased transition-colors`}
+        className={`${inter.variable} ${notoSansJp.variable} ${jetbrainsMono.variable} antialiased transition-colors`}
       >
         {children}
       </body>
