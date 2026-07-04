@@ -3,21 +3,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --canvas: #FAFAFB;
-  --surface: #FFFFFF;
-  --ink: #18181B;
-  --muted: #6E6E78;
-  --line: #E7E7EC;
-  --accent: #2B4EE6;
+  --canvas: #F3F4F2;
+  --surface: #FBFBFA;
+  --ink: #191E2E;
+  --muted: #5D6570;
+  --line: #D7DAD7;
+  --dash: #AEB4B4;
+  --accent: #B93A2B;
+  --steel: #3F5896;
+  --grid: rgba(63, 88, 150, 0.08);
 }
 
 .dark {
-  --canvas: #0B1220;
-  --surface: #121A2E;
-  --ink: #E2E8F0;
-  --muted: #94A3B8;
-  --line: #243044;
-  --accent: #8FA8FF;
+  --canvas: #101319;
+  --surface: #171B23;
+  --ink: #E4E6E4;
+  --muted: #949CA6;
+  --line: #2A303A;
+  --dash: #3E4550;
+  --accent: #E4604C;
+  --steel: #8CA3DE;
+  --grid: rgba(140, 163, 222, 0.06);
 }
 
 @theme inline {
@@ -26,10 +32,11 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-line: var(--line);
+  --color-dash: var(--dash);
   --color-accent: var(--accent);
-  --font-sans: var(--font-noto-sans-jp), "Hiragino Sans", sans-serif;
-  --font-display: var(--font-inter), var(--font-noto-sans-jp), sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "SFMono-Regular", monospace;
+  --color-steel: var(--steel);
+  --font-sans: var(--font-plex-sans-jp), "Hiragino Sans", sans-serif;
+  --font-mono: var(--font-plex-mono), "SFMono-Regular", monospace;
 }
 
 html {
@@ -37,9 +44,102 @@ html {
 }
 
 body {
-  background: var(--canvas);
+  background-color: var(--canvas);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: var(--ink);
   font-family: var(--font-sans);
+}
+
+/* Audit-document group frame: solid perimeter with corner brackets
+   and a classification-style tag sitting on the border */
+.frame {
+  position: relative;
+  border: 1px solid var(--line);
+}
+
+.frame::before,
+.frame::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--steel);
+  border-left: 2px solid var(--steel);
+}
+
+.frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--steel);
+  border-right: 2px solid var(--steel);
+}
+
+.frame-tag {
+  position: absolute;
+  top: 0;
+  left: 1.25rem;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.125rem 0.625rem;
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Entrance animation for the hero */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rise-2 { animation-delay: 0.1s; }
+.rise-3 { animation-delay: 0.2s; }
+.rise-4 { animation-delay: 0.32s; }
+
+/* Pulsing node marker for the current position */
+@keyframes node-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent); }
+  60% { box-shadow: 0 0 0 6px transparent; }
+}
+
+.node-current {
+  animation: node-pulse 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise,
+  .node-current {
+    animation: none;
+  }
 }
 
 @media print {
@@ -50,7 +150,9 @@ body {
     --ink: #000000;
     --muted: #444444;
     --line: #cccccc;
-    --accent: #1a3ab8;
+    --dash: #bbbbbb;
+    --accent: #92291d;
+    --steel: #33477a;
   }
 
   @page {
@@ -62,11 +164,16 @@ body {
   }
 
   body {
+    background-image: none;
     font-size: 10.5pt;
   }
 
   main {
     max-width: none !important;
+  }
+
+  .rise {
+    animation: none;
   }
 
   h2, h3 {

@@ -113,6 +113,7 @@ export interface ResumeData {
     status: string;
   }>;
   workExperience: {
+    overviewText: string;
     overview: string[];
   };
   companies: Array<{
@@ -194,6 +195,7 @@ function transformJSONData(jsonData: JSONResumeData): ResumeData {
       status: item.status,
     })),
     workExperience: {
+      overviewText: jsonData.workExperience.overview.ja,
       overview: jsonData.workExperience.overview.keyExperiences,
     },
     companies: jsonData.workExperience.companies.map(company => ({

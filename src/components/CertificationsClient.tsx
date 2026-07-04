@@ -10,11 +10,11 @@ interface CertificationsClientProps {
 }
 
 const LEVEL_STYLES: { [key: string]: string } = {
-  foundational: 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
-  associate: 'bg-sky-500/10 text-sky-600 dark:text-sky-400',
-  professional: 'bg-violet-500/10 text-violet-600 dark:text-violet-400',
-  specialty: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
-  basic: 'bg-zinc-500/10 text-zinc-600 dark:text-zinc-400',
+  professional: 'text-accent',
+  specialty: 'text-steel',
+  associate: 'text-muted',
+  foundational: 'text-muted',
+  basic: 'text-muted',
 };
 
 export default function CertificationsClient({ certifications }: CertificationsClientProps) {
@@ -34,7 +34,7 @@ export default function CertificationsClient({ certifications }: CertificationsC
   };
 
   const getCertificationBadgeImage = (certName: string) => {
-    // 資格名から画像ファイル名を生成（スペースや特殊文字を除去し、小文字に変換）
+    // Derive the badge filename from the certification name (see CLAUDE.md)
     const fileName = certName
       .toLowerCase()
       .replace(/\s+/g, '-')
@@ -51,16 +51,16 @@ export default function CertificationsClient({ certifications }: CertificationsC
   }, []);
 
   return (
-    <section id="certifications" className="scroll-mt-16 py-14">
+    <section id="certifications" className="scroll-mt-20 py-14">
       <SectionHeading eyebrow="Certifications" title="保有資格" />
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2">
+      <div className="mt-8 grid gap-3 md:grid-cols-2">
         {certifications.map((cert, index) => (
           <div
             key={index}
             data-print-avoid-break
-            className={`flex items-start rounded-xl border border-line bg-surface p-4 shadow-sm ${
-              badgeStates[index] !== false ? 'gap-4' : 'gap-0'
+            className={`flex items-center border border-line bg-surface p-3.5 ${
+              badgeStates[index] !== false ? 'gap-3.5' : 'gap-0'
             }`}
           >
             <CertificationBadge
@@ -70,18 +70,15 @@ export default function CertificationsClient({ certifications }: CertificationsC
             />
             <div className="min-w-0 flex-1">
               <h3 className="text-sm font-medium leading-snug text-ink">{cert.name}</h3>
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                <span
-                  className={`rounded-full px-2 py-0.5 text-xs font-medium ${
-                    LEVEL_STYLES[cert.level] || LEVEL_STYLES.basic
-                  }`}
-                >
+              <p className="mt-1.5 font-mono text-[11px] tracking-[0.06em] text-muted">
+                <span className={`uppercase ${LEVEL_STYLES[cert.level] || LEVEL_STYLES.basic}`}>
                   {cert.level}
                 </span>
-                <span className="font-mono text-xs text-muted">
-                  {getProviderDisplayName(cert.category)} ・ {cert.date}
-                </span>
-              </div>
+                {' ・ '}
+                {getProviderDisplayName(cert.category)}
+                {' ・ '}
+                {cert.date}
+              </p>
             </div>
           </div>
         ))}
@@ -91,7 +88,9 @@ export default function CertificationsClient({ certifications }: CertificationsC
         最新の資格情報は{' '}
         <a
           href="https://www.credly.com/users/keisuke-hiraki"
-          className="text-accent hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline decoration-line underline-offset-4 hover:decoration-accent"
         >
           Credly
         </a>{' '}

@@ -2,20 +2,25 @@ import DarkModeToggle from './DarkModeToggle';
 import PrintButton from './PrintButton';
 
 const NAV_LINKS = [
-  { href: '#personal', label: '基本情報' },
+  { href: '#profile', label: '概要' },
   { href: '#experience', label: '職務経歴' },
   { href: '#skills', label: 'スキル' },
   { href: '#certifications', label: '資格' },
+  { href: '#community', label: '社外活動' },
 ];
 
 export default function Header() {
   const resumeMdHref = `${process.env.NODE_ENV === 'production' ? '/work-history' : ''}/resume.md`;
 
   return (
-    <header className="print:hidden sticky top-0 z-50 border-b border-line bg-canvas/80 backdrop-blur">
+    <header className="print:hidden sticky top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 overflow-x-auto px-6 py-3">
-        <a href="#personal" className="shrink-0 font-display text-sm font-bold tracking-tight text-ink">
-          Keisuke Hiraki
+        <a
+          href="#profile"
+          className="flex shrink-0 items-center gap-2.5 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-ink"
+        >
+          <span aria-hidden="true" className="h-2 w-2 rounded-[1px] bg-accent" />
+          Hiraki Keisuke
         </a>
 
         <div className="flex shrink-0 items-center gap-5">
@@ -33,9 +38,9 @@ export default function Header() {
           <div className="flex items-center gap-3 border-l border-line pl-4">
             <a
               href={resumeMdHref}
-              className="whitespace-nowrap text-sm text-muted transition-colors hover:text-ink"
+              className="whitespace-nowrap font-mono text-xs text-muted transition-colors hover:text-accent"
             >
-              Markdown
+              .md
             </a>
             <PrintButton />
             <DarkModeToggle />

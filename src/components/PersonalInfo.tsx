@@ -1,79 +1,105 @@
 import { getResumeData } from '@/lib/resumeData';
 
-function NodeDiagram() {
+function SpecRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 360 240"
-      className="print:hidden pointer-events-none absolute -top-4 right-0 hidden h-56 w-80 text-accent md:block"
-    >
-      <g stroke="currentColor" strokeWidth="1" strokeOpacity="0.18" fill="none">
-        <path d="M40 200 L120 140 L230 170 L320 90" />
-        <path d="M120 140 L150 60 L260 40" />
-        <path d="M230 170 L260 40" />
-        <path d="M150 60 L40 40" />
-      </g>
-      <g fill="currentColor" fillOpacity="0.3">
-        <rect x="36" y="196" width="8" height="8" rx="1.5" />
-        <rect x="116" y="136" width="8" height="8" rx="1.5" />
-        <rect x="226" y="166" width="8" height="8" rx="1.5" />
-        <rect x="316" y="86" width="8" height="8" rx="1.5" />
-        <rect x="146" y="56" width="8" height="8" rx="1.5" />
-        <rect x="256" y="36" width="8" height="8" rx="1.5" />
-        <rect x="36" y="36" width="8" height="8" rx="1.5" />
-      </g>
-    </svg>
+    <div className="grid gap-1 border-t border-line py-3 first:border-t-0 first:pt-0 last:pb-0 md:grid-cols-[130px_1fr] md:gap-4">
+      <dt className="font-mono text-[11px] uppercase tracking-[0.14em] text-steel">{label}</dt>
+      <dd className="text-sm leading-relaxed text-ink">{children}</dd>
+    </div>
   );
 }
 
 export default function PersonalInfo() {
   const resumeData = getResumeData();
-  const { personalInfo, socialLinks, certifications, awards, personalActivities } = resumeData;
+  const { personalInfo, socialLinks, certifications, awards, personalActivities, careerSummary, workExperience } =
+    resumeData;
 
-  const stats = [
-    { label: '保有資格', value: certifications.length },
-    { label: '表彰', value: awards.length },
-    { label: '登壇', value: personalActivities.speaking.length },
-  ];
+  const awsCertCount = certifications.filter((cert) => cert.category === 'aws').length;
+  const currentCompany = careerSummary.find((item) => item.status === 'current')?.description;
 
   return (
-    <section id="personal" className="relative scroll-mt-16 py-16 md:py-20">
-      <NodeDiagram />
-
-      <div className="relative">
-        <p className="font-mono text-xs uppercase tracking-widest text-accent">Resume / 職務経歴書</p>
-        <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-ink md:text-5xl">
+    <section id="profile" className="scroll-mt-20 pt-14 pb-16 md:pt-20 md:pb-20">
+      <div className="rise">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">
+          Career History <span className="text-muted">/</span> 職務経歴書
+        </p>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight text-ink md:text-[3.4rem] md:leading-[1.1]">
           {personalInfo.name.japanese}
         </h1>
         {personalInfo.name.english && (
-          <p className="mt-2 font-mono text-sm text-muted">{personalInfo.name.english}</p>
+          <p className="mt-3 font-mono text-sm tracking-[0.08em] text-muted">{personalInfo.name.english}</p>
         )}
-        <p className="mt-4 text-lg text-muted">{personalInfo.role}</p>
-
-        <div className="mt-8 flex flex-wrap gap-2">
-          {socialLinks.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-line bg-surface px-3 py-1.5 text-sm text-muted transition-colors hover:border-accent hover:text-accent"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
       </div>
 
-      <dl className="mt-12 grid grid-cols-3 divide-x divide-line border-y border-line">
-        {stats.map((stat) => (
-          <div key={stat.label} className="px-6 py-5 first:pl-0">
-            <dd className="font-display text-3xl font-bold tabular-nums tracking-tight text-ink">
-              {stat.value}
-            </dd>
-            <dt className="mt-1 text-sm text-muted">{stat.label}</dt>
-          </div>
-        ))}
+      <div className="rise rise-2 mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <p className="text-lg font-medium text-ink">{personalInfo.role}</p>
+        {currentCompany && (
+          <p className="flex items-center gap-2 text-sm text-muted">
+            <span className="node-current inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+            {currentCompany} 在籍中
+          </p>
+        )}
+      </div>
+
+      {workExperience.overviewText && (
+        <p className="rise rise-3 mt-6 max-w-2xl leading-relaxed text-muted">{workExperience.overviewText}</p>
+      )}
+
+      <dl className="frame rise rise-4 mt-12 bg-surface p-5 md:p-6">
+        <span className="frame-tag">Profile</span>
+
+        <SpecRow label="Focus">
+          AI ・ クラウド ・ サイバーセキュリティのコンサルティング
+        </SpecRow>
+
+        <SpecRow label="AWS Certified">
+          AWS認定 {awsCertCount}資格を保有（全区分取得）
+        </SpecRow>
+
+        {awards.length > 0 && (
+          <SpecRow label="Awards">
+            <ul className="space-y-1">
+              {awards.map((award, index) => (
+                <li key={index}>
+                  {award.url ? (
+                    <a
+                      href={award.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-line underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                    >
+                      {award.name}
+                    </a>
+                  ) : (
+                    award.name
+                  )}
+                  <span className="ml-2 font-mono text-xs text-muted">{award.year}</span>
+                </li>
+              ))}
+            </ul>
+          </SpecRow>
+        )}
+
+        <SpecRow label="Community">
+          登壇 {personalActivities.speaking.length}回 ・ イベント主催 {personalActivities.eventOrganizing.length}回
+          ・ 技術ブログ執筆
+        </SpecRow>
+
+        <SpecRow label="Links">
+          <span className="flex flex-wrap gap-x-4 gap-y-1.5">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs text-muted transition-colors hover:text-accent"
+              >
+                {link.name} ↗
+              </a>
+            ))}
+          </span>
+        </SpecRow>
       </dl>
     </section>
   );

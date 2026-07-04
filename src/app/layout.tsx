@@ -1,39 +1,32 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_JP, JetBrains_Mono } from "next/font/google";
+import { IBM_Plex_Sans_JP, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import DarkModeScript from "@/components/DarkModeScript";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plexSansJp = IBM_Plex_Sans_JP({
+  variable: "--font-plex-sans-jp",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const notoSansJp = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "平木佳介 - 職務経歴書 | Hiraki Keisuke Resume",
-  description: "AWSソリューションアーキテクト 平木佳介の職務経歴書。AWS認定全12資格取得、クラウド設計・構築・運用の豊富な経験を掲載。",
-  keywords: "平木佳介, Hiraki Keisuke, AWS, ソリューションアーキテクト, 職務経歴書, resume, クラスメソッド",
+  description: "サイバーセキュリティコンサルタント 平木佳介の職務経歴書。AI・クラウド・セキュリティのコンサルティング経験とAWS認定資格の全冠取得実績を掲載。",
+  keywords: "平木佳介, Hiraki Keisuke, サイバーセキュリティ, コンサルタント, AWS, 職務経歴書, resume",
   authors: [{ name: "平木佳介", url: "https://dev.classmethod.jp/author/hiraki-keisuke/" }],
   creator: "平木佳介",
   publisher: "平木佳介",
   openGraph: {
     title: "平木佳介 - 職務経歴書",
-    description: "AWSソリューションアーキテクト 平木佳介の職務経歴書",
+    description: "サイバーセキュリティコンサルタント 平木佳介の職務経歴書",
     url: "https://keisuke-hiraki.github.io/work-history/",
     siteName: "平木佳介 職務経歴書",
     locale: "ja_JP",
@@ -42,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "平木佳介 - 職務経歴書",
-    description: "AWSソリューションアーキテクト 平木佳介の職務経歴書",
+    description: "サイバーセキュリティコンサルタント 平木佳介の職務経歴書",
     creator: "@k_hirasan",
   },
   robots: {
@@ -69,7 +62,7 @@ export default function RootLayout({
         <DarkModeScript />
       </head>
       <body
-        className={`${inter.variable} ${notoSansJp.variable} ${jetbrainsMono.variable} antialiased transition-colors`}
+        className={`${plexSansJp.variable} ${plexMono.variable} antialiased transition-colors`}
       >
         {children}
       </body>
