@@ -222,7 +222,7 @@ VPC/CloudFront/Route 53/ELB/Transit Gateway/Direct Connect/Client VPN/Global Acc
 
 #### セキュリティ、アイデンティティ、コンプライアンス
 
-IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS
+IAM/Cognito/Security Hub/GuardDuty/Detective/IAM Access Analyzer/Inspector/WAF/Shield Advanced/Netwok Firewall/Security Lake/AWS Certificate Manager/KMS/DevOps Agent/Security Agent
 
 #### 管理とガバナンス
 
@@ -280,7 +280,7 @@ Linux/Windows
 
 - AIエージェント (Claude Code/Gemini/Codex)
 - Azure (Microsoft Defender for Cloud/IAM系機能)
-- Google Cloud (Security Command Center/Cloud Armor/Vertex AI/DevOps Agent/Security Agent)
+- Google Cloud (Security Command Center/Cloud Armor/Vertex AI/)
 
 ## 保有資格
 
