@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from './LanguageProvider';
+import { renderInlineMarkdownText } from './InlineMarkdownText';
 
 function SpecRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -44,7 +45,9 @@ export default function PersonalInfo() {
       </div>
 
       {workExperience.overviewText && (
-        <p className="rise rise-3 mt-6 max-w-2xl leading-relaxed text-muted">{workExperience.overviewText}</p>
+        <p className="rise rise-3 mt-6 max-w-2xl leading-relaxed text-muted">
+          {renderInlineMarkdownText(workExperience.overviewText)}
+        </p>
       )}
 
       <dl className="frame rise rise-4 mt-12 bg-surface p-5 md:p-6">

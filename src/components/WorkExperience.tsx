@@ -2,6 +2,7 @@
 
 import { useLanguage } from './LanguageProvider';
 import SectionHeading from './SectionHeading';
+import { renderInlineMarkdownText } from './InlineMarkdownText';
 
 function TechChip({ children }: { children: string }) {
   return (
@@ -35,7 +36,7 @@ export default function WorkExperience() {
           {workExperience.overview.map((item, index) => (
             <li key={index} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
               <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-[1px] bg-steel" aria-hidden="true" />
-              <span>{item}</span>
+              <span>{renderInlineMarkdownText(item)}</span>
             </li>
           ))}
         </ul>
@@ -85,7 +86,7 @@ export default function WorkExperience() {
                 <span className="whitespace-nowrap font-mono text-xs text-muted">{company.employment}</span>
               </div>
               <p className="mt-1.5 text-sm text-muted">
-                {company.description}
+                {renderInlineMarkdownText(company.description)}
                 {company.employees && ` ／ ${company.employees}`}
               </p>
 
@@ -102,7 +103,9 @@ export default function WorkExperience() {
                       )}
                       <h4 className="mt-1 font-semibold text-ink">{project.title}</h4>
                       {project.overview && (
-                        <p className="mt-1.5 text-sm leading-relaxed text-muted">{project.overview}</p>
+                        <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                          {renderInlineMarkdownText(project.overview)}
+                        </p>
                       )}
 
                       {(project.technologies.infrastructure?.length || project.technologies.serverSide?.length) ? (
@@ -130,7 +133,7 @@ export default function WorkExperience() {
                                     className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-dash"
                                     aria-hidden="true"
                                   />
-                                  <span>{task}</span>
+                                  <span>{renderInlineMarkdownText(task)}</span>
                                 </li>
                               ))}
                             </ul>
@@ -151,7 +154,7 @@ export default function WorkExperience() {
                     {company.otherActivities.map((activity, activityIndex) => (
                       <li key={activityIndex} className="flex items-start gap-2">
                         <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-dash" aria-hidden="true" />
-                        <span>{activity}</span>
+                        <span>{renderInlineMarkdownText(activity)}</span>
                       </li>
                     ))}
                   </ul>
