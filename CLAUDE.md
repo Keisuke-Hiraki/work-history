@@ -34,10 +34,7 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs `npm run b
 
 ## Data pipeline architecture
 
-There are **two independent, structurally-duplicated markdown parsers** for `data/resume.md` — know which one is actually live:
-
-- `scripts/sync-resume.js` — plain JS `ResumeMarkdownParser`, run via `npm run sync`. This is the one that matters: it reads `data/resume.md` and writes `data/resume.json`.
-- `src/lib/markdownParser.ts` — a TypeScript `MarkdownParser` class with the same section-parsing logic plus `parseResumeFromFile()`. **This file is dead code** — nothing under `src/` imports it. If you touch the parsing logic, changes belong in `scripts/sync-resume.js` (and the JSON shape it emits), not this file.
+`scripts/sync-resume.js` — plain JS `ResumeMarkdownParser`, run via `npm run sync`. It reads `data/resume.md` and writes `data/resume.json`, and also copies `data/resume.md` to `public/resume.md` (served as the "download as markdown" link in `Header.tsx`). This is the only parser in the repo — if you touch the parsing logic, changes belong here (and the JSON shape it emits).
 
 Runtime data flow: `data/resume.json` → `src/lib/resumeData.ts` (`getResumeData()`, module-level cached, reads the JSON at build/request time and reshapes it into the `ResumeData` type used by components) → page components. Types for the reshaped data live in `src/lib/types.ts`.
 
@@ -49,6 +46,6 @@ Sections under `src/components/` follow a server/client split: a server componen
 
 ## Static export gotchas
 
-- `next.config.ts` sets `basePath`/`assetPrefix` to `/work-history` only when `NODE_ENV === 'production'` (GitHub Pages project site). Any code building asset URLs client-side must replicate this same conditional (see `CertificationsClient.tsx`'s `getCertificationBadgeImage`), since Next's automatic basePath injection doesn't apply to manually constructed strings.
-- `DownloadButton.tsx` cannot call `getResumeData()` (server-only, reads from filesystem) and instead ships a hardcoded fallback markdown snippet for the "download as markdown" feature — keep this in sync manually if basic info changes, or accept it'll drift.
-- Certification badge images live in `public/*.png`; the filename is derived from the certification name by `getCertificationBadgeImage()` in `CertificationsClient.tsx` (lowercased, non `[a-z0-9-]` stripped, spaces→hyphens). When adding a certification to `resume.md`, add a matching PNG to `public/` with that exact slug.
+- `next.config.ts` sets `basePath`/`assetPrefix` to `/work-history` only when `NODE_ENV === 'production'` (GitHub Pages project site). Any code building asset URLs client-side must replicate this same conditional (see `CertificationsClient.tsx`'s `getCertificationBadgeImage`, and `Header.tsx`'s `resumeMdHref`), since Next's automatic basePath injection doesn't apply to manually constructed strings.
+- The "download as markdown" link in `Header.tsx` just points at `public/resume.md`, a static copy that `npm run sync` regenerates from `data/resume.md` — always run `npm run sync` after editing `resume.md` so the two don't drift.
+- Certification badge images live in `public/*.png`; the filename is derived from the certification name by `getCertificationBadgeImage()` in `CertificationsClient.tsx` (lowercased, non `[a-z0-9-]` stripped, spaces→hyphens). When adding a certification to `resume.md`, add a matching PNG to `public/` with that exact slug — a mismatched slug (e.g. a stray suffix in the filename) silently hides the badge instead of erroring.
