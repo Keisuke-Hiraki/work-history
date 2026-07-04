@@ -21,7 +21,7 @@ Both files are parsed by the same parser (`scripts/sync-resume.js`), which keys 
 
 ## Keep in Japanese, byte-identical to the source
 
-- Structural headings: `# 基本情報`, `# アカウント`, `# 職務経歴概略`, `# 業務経験概略`, `# 職務経歴詳細`, `# スキル・経験`, `## スキル`, `## 保有資格`, `## 表彰`, `## 個人活動`, `### ブログ`, `### 登壇`, `### イベント開催`, `### AWS`, `### IaC`, `### OS`, `### SaaS`, all `#### <AWSカテゴリ>` skill-category headings (e.g. `#### コンピューティング`), and `### 案件外業務/単発業務`.
+- Structural headings: `# 基本情報`, `# アカウント`, `# 職務経歴概略`, `# 業務経験概略`, `# 職務経歴詳細`, `# スキル・経験`, `## スキル`, `## 保有資格`, `## 表彰`, `## コミュニティ活動`, `### ブログ`, `### 登壇`, `### イベント開催`, `### AWS`, `### IaC`, `### OS`, `### SaaS`, all `#### <AWSカテゴリ>` skill-category headings (e.g. `#### コンピューティング`), and `### 案件外業務/単発業務`.
 - Field labels: `事業内容：`, `従業員：`, `在籍期間：`, `雇用形態：`, `概要`, `期間`, `経験した職種・役割`, `担当工程`, `使用技術`, `業務内容`, `インフラ：`, `サーバーサイド：`, `資料：`, `開催報告：`, `名前`, `職種`.
 - Table header rows: `| Key | Value |`, `| 期間 | 説明 |`, `|資格名 | 取得日 |`, `| 名前 | 年 |`.
 - The top line label: `最終更新日: <date>` (date value unchanged).
