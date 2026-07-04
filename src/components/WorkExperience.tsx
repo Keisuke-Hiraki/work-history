@@ -1,4 +1,6 @@
-import { getResumeData } from '@/lib/resumeData';
+'use client';
+
+import { useLanguage } from './LanguageProvider';
 import SectionHeading from './SectionHeading';
 
 function TechChip({ children }: { children: string }) {
@@ -21,12 +23,12 @@ function FieldRow({ label, children }: { label: string; children: React.ReactNod
 }
 
 export default function WorkExperience() {
-  const resumeData = getResumeData();
+  const { data: resumeData, t } = useLanguage();
   const { workExperience, companies, careerSummary } = resumeData;
 
   return (
     <section id="experience" className="scroll-mt-20 py-14">
-      <SectionHeading eyebrow="Work Experience" title="職務経歴" />
+      <SectionHeading eyebrow="Work Experience" title={t.workExperience.title} />
 
       {workExperience.overview.length > 0 && (
         <ul className="mt-8 max-w-3xl space-y-2">
@@ -58,7 +60,9 @@ export default function WorkExperience() {
               </span>
               <span className="pl-[18px] text-sm font-medium text-ink md:pl-0">
                 {item.description}
-                {item.status === 'current' && <span className="ml-2 font-mono text-xs text-accent">— 在籍中</span>}
+                {item.status === 'current' && (
+                  <span className="ml-2 font-mono text-xs text-accent">{t.workExperience.presentSuffix}</span>
+                )}
               </span>
             </li>
           ))}
@@ -140,7 +144,9 @@ export default function WorkExperience() {
 
               {company.otherActivities && company.otherActivities.length > 0 && (
                 <div className="mt-5 border border-line border-l-2 border-l-dash bg-canvas p-4">
-                  <h4 className="font-mono text-[11px] uppercase tracking-[0.1em] text-steel">その他の業務</h4>
+                  <h4 className="font-mono text-[11px] uppercase tracking-[0.1em] text-steel">
+                    {t.workExperience.otherActivities}
+                  </h4>
                   <ul className="mt-2 space-y-1 text-sm text-muted">
                     {company.otherActivities.map((activity, activityIndex) => (
                       <li key={activityIndex} className="flex items-start gap-2">

@@ -7,6 +7,9 @@ class ResumeMarkdownParser {
   constructor(content) {
     this.content = content;
     this.sections = new Map();
+    // Maps a top-level (# ) section name to the ordered list of its
+    // immediate ## subsection names, e.g. '職務経歴詳細' -> ['クラスメソッド株式会社', ...]
+    this.topLevelSubsections = new Map();
     this.parseSections();
   }
 
@@ -14,19 +17,28 @@ class ResumeMarkdownParser {
     const lines = this.content.split('\n');
     let currentSection = '';
     let currentContent = [];
+    let currentTopLevelSection = '';
 
     for (const line of lines) {
-      if (line.startsWith('# ')) {
+      if (line.startsWith('# ') && !line.startsWith('## ')) {
         if (currentSection && currentContent.length > 0) {
           this.sections.set(currentSection, currentContent.join('\n').trim());
         }
         currentSection = line.replace('# ', '').trim();
+        currentTopLevelSection = currentSection;
         currentContent = [];
       } else if (line.startsWith('## ')) {
         if (currentSection && currentContent.length > 0) {
           this.sections.set(currentSection, currentContent.join('\n').trim());
         }
         currentSection = line.replace('## ', '').trim();
+
+        if (currentTopLevelSection) {
+          if (!this.topLevelSubsections.has(currentTopLevelSection)) {
+            this.topLevelSubsections.set(currentTopLevelSection, []);
+          }
+          this.topLevelSubsections.get(currentTopLevelSection).push(currentSection);
+        }
         currentContent = [];
       } else {
         currentContent.push(line);
@@ -140,25 +152,34 @@ class ResumeMarkdownParser {
   }
 
   determineStatus(period) {
-    if (period.includes('現在')) return 'current';
-    if (period.includes('退学')) return 'education';
+    if (period.includes('現在') || period.includes('Present')) return 'current';
+    if (period.includes('退学') || period.toLowerCase().includes('withdrew')) return 'education';
     return 'past';
   }
 
   parseWorkExperience() {
     const content = this.sections.get('業務経験概略') || '';
     const lines = content.split('\n');
-    
+
     const keyExperiences = [];
+    const overviewParagraphLines = [];
     let startCollecting = false;
 
     for (const line of lines) {
-      if (line.includes('主な業務経験としては以下です')) {
+      const trimmedLine = line.trim();
+
+      if (trimmedLine.includes('主な業務経験としては以下です')) {
         startCollecting = true;
         continue;
       }
-      if (startCollecting && line.trim().startsWith('- ')) {
-        keyExperiences.push(line.replace(/^- /, '').trim());
+      if (startCollecting && trimmedLine.startsWith('- ')) {
+        keyExperiences.push(trimmedLine.replace(/^- /, '').trim());
+        continue;
+      }
+      // Anything before the "主な業務経験としては以下です" marker is the
+      // free-form overview prose paragraph.
+      if (!startCollecting && trimmedLine) {
+        overviewParagraphLines.push(trimmedLine);
       }
     }
 
@@ -167,7 +188,7 @@ class ResumeMarkdownParser {
 
     return {
       overview: {
-        ja: "現在は、AIやクラウドをはじめとしたサイバーセキュリティ領域のコンサルティングを行っております。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。",
+        ja: overviewParagraphLines.join(''),
         keyExperiences
       },
       companies
@@ -175,23 +196,19 @@ class ResumeMarkdownParser {
   }
 
   parseCompanies() {
-    const content = this.sections.get('職務経歴詳細') || '';
+    // '職務経歴詳細' is a top-level (# ) section whose content is entirely
+    // made up of ## company subsections (parseSections stores each ##
+    // subsection under its own key), so we drive iteration off the
+    // recorded subsection order rather than the (empty) top-level content.
+    const companyNames = this.topLevelSubsections.get('職務経歴詳細') || [];
     const companies = [];
-    
-    // Split by company (## headers) and filter empty blocks
-    const companyBlocks = content.split(/(?=^## )/m).filter(block => block.trim());
-    
-    for (const block of companyBlocks) {
-      if (!block.trim()) continue;
-      
-      const lines = block.split('\n');
-      const companyName = lines[0]?.replace('## ', '').trim();
-      
-      if (!companyName) continue;
-      
+
+    for (const companyName of companyNames) {
+      const block = this.sections.get(companyName) || '';
+
       const basicInfo = this.parseCompanyBasicInfo(block);
       const projects = this.parseProjects(block);
-      
+
       companies.push({
         name: companyName,
         businessDescription: basicInfo.businessDescription,
@@ -205,7 +222,7 @@ class ResumeMarkdownParser {
         additionalActivities: basicInfo.additionalActivities
       });
     }
-    
+
     return companies;
   }
 
@@ -238,14 +255,14 @@ class ResumeMarkdownParser {
       }
     }
 
-    // Parse additional activities from 案件外業務/単発業務
+    // Parse additional activities from 案件外業務/単発業務 (flatten both
+    // top-level and nested bullet items into a single list)
     if (block.includes('案件外業務/単発業務')) {
       const activityLines = block.split('案件外業務/単発業務')[1]?.split('\n') || [];
       for (const line of activityLines) {
-        if (line.trim().startsWith('- ')) {
-          additionalActivities.push(line.replace(/^- /, '').trim());
-        } else if (line.trim().startsWith('  - ')) {
-          additionalActivities.push(line.replace(/^  - /, '').trim());
+        const trimmedLine = line.trim();
+        if (trimmedLine.startsWith('- ')) {
+          additionalActivities.push(trimmedLine.replace(/^- /, '').trim());
         }
       }
     }
@@ -318,8 +335,8 @@ class ResumeMarkdownParser {
         continue;
       }
 
-      if (trimmedLine.startsWith('  - ') && currentSection) {
-        const content = trimmedLine.replace(/^  - /, '').trim();
+      if (trimmedLine.startsWith('- ') && currentSection) {
+        const content = trimmedLine.replace(/^- /, '').trim();
         
         switch (currentSection) {
           case 'overview':
@@ -350,10 +367,10 @@ class ResumeMarkdownParser {
         }
       }
 
-      if (trimmedLine.startsWith('  - インフラ：')) {
+      if (trimmedLine.startsWith('- インフラ：')) {
         technologies.infrastructure = trimmedLine.split('：')[1]?.split(/[,、]/).map(t => t.trim()) || [];
       }
-      if (trimmedLine.startsWith('  - サーバーサイド：')) {
+      if (trimmedLine.startsWith('- サーバーサイド：')) {
         technologies.serverSide = trimmedLine.split('：')[1]?.split(/[,、]/).map(t => t.trim()) || [];
       }
     }
@@ -373,7 +390,9 @@ class ResumeMarkdownParser {
   }
 
   parseSkills() {
-    const content = this.sections.get('スキル・経験') || '';
+    // 'スキル' is the ## subsection under the '# スキル・経験' top-level
+    // section that actually holds the AWS/IaC/OS/SaaS content.
+    const content = this.sections.get('スキル') || '';
     const aws = {};
     let iac = [];
     let os = [];
@@ -427,14 +446,19 @@ class ResumeMarkdownParser {
       }
 
       if (currentSection === 'saas' && line.startsWith('- ')) {
-        const content = line.replace(/^- /, '').trim();
-        if (content.includes('(') && content.includes(')')) {
-          const match = content.match(/^([^(]+)\s*\(([^)]+)\)/);
+        const bulletContent = line.replace(/^- /, '').trim();
+        if (bulletContent.includes('(') && bulletContent.includes(')')) {
+          const match = bulletContent.match(/^([^(]+)\s*\(([^)]+)\)/);
           if (match) {
             const vendor = match[1].trim().toLowerCase();
             const tools = match[2].split('/').map(tool => tool.trim());
             saas[vendor] = tools;
           }
+        } else {
+          // Plain bullet without a "Vendor (tool/tool)" grouping,
+          // e.g. "Slack/Tocaro/Box/Zoom/Webex/Ovice" or "GitHub"
+          if (!saas.other) saas.other = [];
+          saas.other.push(...bulletContent.split('/').map(tool => tool.trim()).filter(Boolean));
         }
       }
     }
@@ -559,7 +583,7 @@ class ResumeMarkdownParser {
         }
       }
       
-      if (trimmedLine.includes('  - 資料：')) {
+      if (trimmedLine.startsWith('- 資料：')) {
         const match = trimmedLine.match(/資料：\s*\[([^\]]+)\]\(([^)]+)\)/);
         if (match) {
           currentTitle = match[1];
@@ -612,7 +636,7 @@ class ResumeMarkdownParser {
         }
       }
       
-      if (trimmedLine.includes('  - 開催報告：')) {
+      if (trimmedLine.startsWith('- 開催報告：')) {
         const match = trimmedLine.match(/開催報告：\s*\[([^\]]+)\]\(([^)]+)\)/);
         if (match) {
           currentReportTitle = match[1];
@@ -679,7 +703,28 @@ function syncResumeData() {
     console.log(`📄 Target: ${jsonPath}`);
     console.log(`📄 Public copy: ${publicMdPath}`);
     console.log(`📅 Last updated: ${resumeData.lastUpdated}`);
-    
+
+    // Optional English translation: same Japanese markdown headers/field
+    // labels, English content. Parsed with the same parser (keys stay
+    // Japanese). Skipped silently if the file doesn't exist yet.
+    const mdEnPath = path.join(projectRoot, 'data', 'resume.en.md');
+    if (fs.existsSync(mdEnPath)) {
+      const jsonEnPath = path.join(projectRoot, 'data', 'resume.en.json');
+      const publicMdEnPath = path.join(projectRoot, 'public', 'resume.en.md');
+
+      const mdEnContent = fs.readFileSync(mdEnPath, 'utf8');
+      const enParser = new ResumeMarkdownParser(mdEnContent);
+      const resumeEnData = enParser.parse();
+
+      fs.writeFileSync(jsonEnPath, JSON.stringify(resumeEnData, null, 2) + '\n');
+      fs.copyFileSync(mdEnPath, publicMdEnPath);
+
+      console.log('✅ English resume data synchronized successfully!');
+      console.log(`📄 Source: ${mdEnPath}`);
+      console.log(`📄 Target: ${jsonEnPath}`);
+      console.log(`📄 Public copy: ${publicMdEnPath}`);
+    }
+
   } catch (error) {
     console.error('❌ Error syncing resume data:', error.message);
     process.exit(1);

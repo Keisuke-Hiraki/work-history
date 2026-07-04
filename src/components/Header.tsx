@@ -1,16 +1,23 @@
+'use client';
+
 import DarkModeToggle from './DarkModeToggle';
 import PrintButton from './PrintButton';
-
-const NAV_LINKS = [
-  { href: '#profile', label: '概要' },
-  { href: '#experience', label: '職務経歴' },
-  { href: '#skills', label: 'スキル' },
-  { href: '#certifications', label: '資格' },
-  { href: '#community', label: '社外活動' },
-];
+import LanguageToggle from './LanguageToggle';
+import { useLanguage } from './LanguageProvider';
 
 export default function Header() {
-  const resumeMdHref = `${process.env.NODE_ENV === 'production' ? '/work-history' : ''}/resume.md`;
+  const { locale, t } = useLanguage();
+
+  const navLinks = [
+    { href: '#profile', label: t.nav.profile },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#certifications', label: t.nav.certifications },
+    { href: '#community', label: t.nav.community },
+  ];
+
+  const resumeMdFile = locale === 'en' ? 'resume.en.md' : 'resume.md';
+  const resumeMdHref = `${process.env.NODE_ENV === 'production' ? '/work-history' : ''}/${resumeMdFile}`;
 
   return (
     <header className="print:hidden sticky top-0 z-50 border-b border-line bg-canvas/85 backdrop-blur">
@@ -25,7 +32,7 @@ export default function Header() {
 
         <div className="flex shrink-0 items-center gap-5">
           <nav className="flex gap-4 text-sm text-muted">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -43,6 +50,7 @@ export default function Header() {
               .md
             </a>
             <PrintButton />
+            <LanguageToggle />
             <DarkModeToggle />
           </div>
         </div>

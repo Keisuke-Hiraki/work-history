@@ -1,7 +1,9 @@
-import { getResumeData } from '@/lib/resumeData';
+'use client';
+
+import { useLanguage } from './LanguageProvider';
 
 export default function Footer() {
-  const resumeData = getResumeData();
+  const { data: resumeData } = useLanguage();
   const { lastUpdated, socialLinks } = resumeData;
 
   return (

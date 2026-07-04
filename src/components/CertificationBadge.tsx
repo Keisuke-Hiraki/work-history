@@ -3,12 +3,12 @@
 import { useState } from 'react';
 
 interface CertificationBadgeProps {
-  certName: string;
   badgeImageSrc: string;
+  badgeAlt: string;
   onImageLoad?: (hasImage: boolean) => void;
 }
 
-export default function CertificationBadge({ certName, badgeImageSrc, onImageLoad }: CertificationBadgeProps) {
+export default function CertificationBadge({ badgeImageSrc, badgeAlt, onImageLoad }: CertificationBadgeProps) {
   const [imageExists, setImageExists] = useState(true);
 
   const handleImageError = () => {
@@ -30,7 +30,7 @@ export default function CertificationBadge({ certName, badgeImageSrc, onImageLoa
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={badgeImageSrc}
-        alt={`${certName} バッジ`}
+        alt={badgeAlt}
         className="h-14 w-14 rounded-[3px] object-contain"
         onError={handleImageError}
         onLoad={handleImageSuccess}

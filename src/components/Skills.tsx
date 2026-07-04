@@ -1,25 +1,11 @@
-import { getResumeData } from '@/lib/resumeData';
+'use client';
+
+import { useLanguage } from './LanguageProvider';
 import SectionHeading from './SectionHeading';
+import type { Translations } from '@/lib/i18n';
 
-const CATEGORY_DISPLAY_NAMES: { [key: string]: string } = {
-  computing: 'コンピューティング',
-  storage: 'ストレージ',
-  database: 'データベース',
-  networkingAndContentDelivery: 'ネットワーキング・コンテンツ配信',
-  securityIdentityCompliance: 'セキュリティ・コンプライアンス',
-  managementGovernance: '管理・ガバナンス',
-  analytics: '分析',
-  applicationIntegration: 'アプリケーション統合',
-  developerTools: '開発者ツール',
-  multiAccountManagement: 'マルチアカウント管理',
-  businessApplications: 'ビジネスアプリケーション',
-  cloudFinancialManagement: 'クラウド財務管理',
-  mobileWebAppDevelopment: 'モバイル・ウェブアプリ開発',
-  migrationTransfer: '移行・転送',
-};
-
-function getCategoryDisplayName(category: string): string {
-  return CATEGORY_DISPLAY_NAMES[category] || category;
+function getCategoryDisplayName(category: string, categories: Translations['skills']['categories']): string {
+  return categories[category] || category;
 }
 
 function SkillTable({ tag, rows }: { tag: string; rows: Array<[string, string[]]> }) {
@@ -42,11 +28,11 @@ function SkillTable({ tag, rows }: { tag: string; rows: Array<[string, string[]]
 }
 
 export default function Skills() {
-  const resumeData = getResumeData();
+  const { data: resumeData, t } = useLanguage();
   const { skills } = resumeData;
 
   const awsRows: Array<[string, string[]]> = Object.entries(skills.aws).map(([category, list]) => [
-    getCategoryDisplayName(category),
+    getCategoryDisplayName(category, t.skills.categories),
     list,
   ]);
 
@@ -58,7 +44,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-20 py-14">
-      <SectionHeading eyebrow="Skills" title="スキル・経験" />
+      <SectionHeading eyebrow="Skills" title={t.skills.title} />
 
       <div className="mt-8 space-y-10">
         <SkillTable tag="AWS" rows={awsRows} />

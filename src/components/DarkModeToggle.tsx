@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLanguage } from './LanguageProvider';
 
 export default function DarkModeToggle() {
+  const { t } = useLanguage();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function DarkModeToggle() {
     <button
       onClick={toggleDarkMode}
       className="border border-line p-1.5 text-muted transition-colors hover:border-accent hover:text-accent"
-      aria-label="ダークモード切り替え"
+      aria-label={t.header.darkModeAria}
     >
       {isDarkMode ? (
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

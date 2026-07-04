@@ -1,13 +1,15 @@
-import { getResumeData } from '@/lib/resumeData';
+'use client';
+
+import { useLanguage } from './LanguageProvider';
 import SectionHeading from './SectionHeading';
 
 export default function PersonalActivities() {
-  const resumeData = getResumeData();
+  const { data: resumeData, t } = useLanguage();
   const { personalActivities } = resumeData;
 
   return (
     <section id="community" className="scroll-mt-20 py-14">
-      <SectionHeading eyebrow="Community" title="社外活動" />
+      <SectionHeading eyebrow="Community" title={t.personalActivities.title} />
 
       <div className="mt-8 space-y-10">
         {personalActivities.speaking.length > 0 && (
@@ -60,7 +62,7 @@ export default function PersonalActivities() {
                       rel="noopener noreferrer"
                       className="mt-1 inline-block font-mono text-xs text-accent transition-colors hover:underline"
                     >
-                      開催報告 ↗
+                      {t.personalActivities.eventReport} ↗
                     </a>
                   )}
                 </div>

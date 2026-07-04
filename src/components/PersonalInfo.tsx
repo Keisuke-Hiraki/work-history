@@ -1,4 +1,6 @@
-import { getResumeData } from '@/lib/resumeData';
+'use client';
+
+import { useLanguage } from './LanguageProvider';
 
 function SpecRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -10,7 +12,7 @@ function SpecRow({ label, children }: { label: string; children: React.ReactNode
 }
 
 export default function PersonalInfo() {
-  const resumeData = getResumeData();
+  const { data: resumeData, t } = useLanguage();
   const { personalInfo, socialLinks, certifications, awards, personalActivities, careerSummary, workExperience } =
     resumeData;
 
@@ -21,7 +23,7 @@ export default function PersonalInfo() {
     <section id="profile" className="scroll-mt-20 pt-14 pb-16 md:pt-20 md:pb-20">
       <div className="rise">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-steel">
-          Career History <span className="text-muted">/</span> 職務経歴書
+          Career History <span className="text-muted">/</span> {t.personalInfo.eyebrowSuffix}
         </p>
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-ink md:text-[3.4rem] md:leading-[1.1]">
           {personalInfo.name.japanese}
@@ -36,7 +38,7 @@ export default function PersonalInfo() {
         {currentCompany && (
           <p className="flex items-center gap-2 text-sm text-muted">
             <span className="node-current inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-            {currentCompany} 在籍中
+            {currentCompany} {t.personalInfo.present}
           </p>
         )}
       </div>
@@ -49,11 +51,11 @@ export default function PersonalInfo() {
         <span className="frame-tag">Profile</span>
 
         <SpecRow label="Focus">
-          AI ・ クラウド ・ サイバーセキュリティのコンサルティング
+          {t.personalInfo.focus}
         </SpecRow>
 
         <SpecRow label="AWS Certified">
-          AWS認定 {awsCertCount}資格を保有（全区分取得）
+          {t.personalInfo.awsCertified(awsCertCount)}
         </SpecRow>
 
         {awards.length > 0 && (
@@ -81,8 +83,7 @@ export default function PersonalInfo() {
         )}
 
         <SpecRow label="Community">
-          登壇 {personalActivities.speaking.length}回 ・ イベント主催 {personalActivities.eventOrganizing.length}回
-          ・ 技術ブログ執筆
+          {t.personalInfo.community(personalActivities.speaking.length, personalActivities.eventOrganizing.length)}
         </SpecRow>
 
         <SpecRow label="Links">

@@ -2,12 +2,12 @@
   "lastUpdated": "2026-07-04",
   "basicInfo": {
     "name": {
-      "ja": "平木 佳介",
-      "en": "Hiraki Keisuke"
+      "ja": "Keisuke Hiraki",
+      "en": ""
     },
     "role": {
-      "ja": "サイバーセキュリティコンサルタント",
-      "en": "サイバーセキュリティコンサルタント"
+      "ja": "Cybersecurity Consultant",
+      "en": "Cybersecurity Consultant"
     }
   },
   "socialLinks": [
@@ -39,58 +39,52 @@
   ],
   "careerSummary": [
     {
-      "period": "2025年7月～現在",
-      "company": "株式会社サイバーセキュリティクラウド",
+      "period": "Jul 2025 – Present",
+      "company": "Cyber Security Cloud, Inc.",
       "status": "current"
     },
     {
-      "period": "2023年4月〜2025年6月",
-      "company": "クラスメソッド株式会社",
+      "period": "Apr 2023 – Jun 2025",
+      "company": "Classmethod, Inc.",
       "status": "past"
     },
     {
-      "period": "2021年1月～2023年3月",
-      "company": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
+      "period": "Jan 2021 – Mar 2023",
+      "company": "Yume Technology, Inc. (now OpenUp IT Engineer, Inc.)",
       "status": "past"
     },
     {
-      "period": "2020年12月",
-      "company": "静岡大学 工学部 機械工学科（中途退学）",
+      "period": "Dec 2020",
+      "company": "Shizuoka University, Faculty of Engineering, Mechanical Engineering (withdrew)",
       "status": "past"
     }
   ],
   "workExperience": {
     "overview": {
-      "ja": "現在は、AIやクラウドをはじめとしたサイバーセキュリティ領域のコンサルティングを行っております。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。",
-      "keyExperiences": [
-        "PCIDSSに準拠した金融システムのAWS基盤設計構築運用",
-        "大手ポイントサービスにおけるデータ分析基盤のネットワーク・セキュリティ設計構築支援",
-        "CloudFormation、Terraformを活用したインフラ基盤のIaC化",
-        "エンタープライズ企業向けマルチアカウント環境下AWSセキュリティ・ガバナンスにおけるコンサル・ガイドライン導入支援",
-        "ブロックチェーン技術に基づくAWSインフラの設計構築支援"
-      ]
+      "ja": "Currently providing consulting in the cybersecurity domain, including AI and cloud security. Building on experience in design, implementation, and consulting cultivated as an AWS Solutions Architect, I provide support in security and governance.Key areas of professional experience include:- Design, implementation, and operation of AWS infrastructure for financial systems compliant with PCI DSS- Support for designing and building network and security architecture for a data analytics platform at a major points-service company- IaC transformation of infrastructure using CloudFormation and Terraform- Consulting and guideline implementation support for AWS security and governance in multi-account environments for enterprise clients- Design and build support for AWS infrastructure based on blockchain technology",
+      "keyExperiences": []
     },
     "companies": [
       {
-        "name": "クラスメソッド株式会社",
-        "businessDescription": "クラウド（AWS等）の技術コンサルティング、開発等",
-        "employees": "約780名（2024年7月現在、グループ全体）",
+        "name": "Classmethod, Inc.",
+        "businessDescription": "Cloud (AWS, etc.) technical consulting, development, and related services",
+        "employees": "Approx. 780 (as of July 2024, group-wide)",
         "period": {
-          "start": "2023年4月",
-          "end": "現在"
+          "start": "",
+          "end": ""
         },
-        "employmentType": "正社員",
+        "employmentType": "Full-time",
         "projects": [
           {
-            "title": "AWS運用支援",
-            "overview": "CCoEチーム発足に伴うAWS運用支援",
+            "title": "AWS Operations Support",
+            "overview": "AWS operations support accompanying the launch of a CCoE (Cloud Center of Excellence) team",
             "period": {
-              "start": "2023年10月",
-              "end": "現在"
+              "start": "",
+              "end": ""
             },
-            "role": "ソリューションアーキテクト",
+            "role": "Solutions Architect",
             "responsibilities": [
-              "コンサルティング"
+              "Consulting"
             ],
             "technologies": {
               "infrastructure": [
@@ -98,22 +92,22 @@
               ]
             },
             "tasks": [
-              "全社AWS利用標準化に伴うガイドラインの更新支援",
-              "Organizationsを活用しないマルチアカウントのセキュリティ・ユーザー・ネットワークの統制管理環境の設計",
-              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）",
-              "セキュリティ運用効率化に伴うロジックの導入支援"
+              "Supported updates to guidelines for company-wide AWS usage standardization",
+              "Designed a governance environment for security, user, and network management across multiple accounts without using Organizations",
+              "Supported the design of network environments involving dedicated line connections (Direct Connect, Transit Gateway, etc.)",
+              "Supported the introduction of logic to improve security operation efficiency"
             ]
           },
           {
-            "title": "技術アドバイザー",
-            "overview": "テクニカルアカウントマネージャー（以下、TAM）相当の顧客支援",
+            "title": "Technical Advisor",
+            "overview": "Customer support equivalent to a Technical Account Manager (TAM)",
             "period": {
-              "start": "2023年6月",
-              "end": "現在"
+              "start": "",
+              "end": ""
             },
-            "role": "ソリューションアーキテクト",
+            "role": "Solutions Architect",
             "responsibilities": [
-              "コンサルティング"
+              "Consulting"
             ],
             "technologies": {
               "infrastructure": [
@@ -121,23 +115,23 @@
               ]
             },
             "tasks": [
-              "顧客のAWS環境における技術課題の解決",
-              "顧客サービスにおけるメール機能実装におけるQA支援",
-              "SPA構築に伴う設計支援",
-              "開発環境のCI/CDソリューション設計",
-              "定期的なAWSサービスのプライベート勉強会の開催"
+              "Resolved technical challenges in customers' AWS environments",
+              "Supported QA for email feature implementation in a customer service",
+              "Provided design support for building an SPA (Single Page Application)",
+              "Designed a CI/CD solution for a development environment",
+              "Hosted regular private study sessions on AWS services"
             ]
           },
           {
-            "title": "AWS利用ガイドライン策定支援・アカウント/セキュリティ導入支援",
-            "overview": "データ分析基盤のAWS環境への移行に伴うAWS利用ガイドラインの策定およびアカウント/セキュリティの設計支援",
+            "title": "AWS Usage Guideline Development Support / Account & Security Implementation Support",
+            "overview": "Developed AWS usage guidelines and supported account/security design in connection with migrating a data analytics platform to AWS",
             "period": {
-              "start": "2023年5月",
-              "end": "2024年1月"
+              "start": "",
+              "end": ""
             },
-            "role": "ソリューションアーキテクト",
+            "role": "Solutions Architect",
             "responsibilities": [
-              "コンサルティング"
+              "Consulting"
             ],
             "technologies": {
               "infrastructure": [
@@ -145,45 +139,45 @@
               ]
             },
             "tasks": [
-              "個人情報の取り扱いに準じたセキュリティを担保するソリューションの設計構築",
-              "Control Tower,Organizationsを活用したベストプラクティスなアカウント設計構築",
-              "専用線環境を伴うネットワーク環境の設計支援（Direct Connect/Transit Gatewayなど）"
+              "Designed and built a solution ensuring security compliant with personal information handling requirements",
+              "Designed and built a best-practice account structure using Control Tower and Organizations",
+              "Supported the design of network environments involving dedicated line connections (Direct Connect, Transit Gateway, etc.)"
             ]
           }
         ],
         "additionalActivities": [
-          "プリセールス",
-          "技術相談会",
-          "コスト最適化アセスメント",
-          "セキュリティアセスメント",
-          "マルチアカウント運用効率化支援"
+          "Pre-sales",
+          "Technical consultation sessions",
+          "Cost optimization assessments",
+          "Security assessments",
+          "Support for improving multi-account operational efficiency"
         ]
       },
       {
-        "name": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
-        "businessDescription": "エンジニア派遣事業",
-        "employees": "3642名（2021年6月時点）",
+        "name": "Yume Technology, Inc. (now OpenUp IT Engineer, Inc.)",
+        "businessDescription": "Engineer staffing/dispatch services",
+        "employees": "3,642 (as of June 2021)",
         "period": {
-          "start": "2021年1月",
-          "end": "2023年3月"
+          "start": "",
+          "end": ""
         },
-        "employmentType": "正社員",
+        "employmentType": "Full-time",
         "projects": [
           {
-            "title": "決済代行システム AWS基盤運用案件",
-            "overview": "決済代行システム基盤の AWS への移行、構築運用",
+            "title": "Payment Agency System AWS Infrastructure Operations Project",
+            "overview": "Migration of a payment agency system infrastructure to AWS, along with its construction and operation",
             "period": {
-              "start": "2022年1月",
-              "end": "2023年3月"
+              "start": "",
+              "end": ""
             },
-            "role": "AWSエンジニア",
+            "role": "AWS Engineer",
             "responsibilities": [
-              "システム移行、構築運用業務"
+              "System migration, build, and operations"
             ],
             "technologies": {
               "infrastructure": [
                 "AWS",
-                "シェルスクリプト",
+                "Shell Script",
                 "SQL"
               ],
               "serverSide": [
@@ -191,25 +185,25 @@
               ]
             },
             "tasks": [
-              "AWSリソース全般の障害調査担当",
-              "PCIDSSに準拠したコンポーネントの設定の調査",
-              "マルチアカウント環境下でのスイッチロール作業",
-              "IDS/IPSの導入(Tripwire)",
-              "運用改善に向けたタスク自動化（PowerAutomate等）の導入",
-              "CloudFormationによるインフラ基盤のIaC化",
-              "新機能リリースに伴うAWSリソースの構築"
+              "Handled failure investigation across AWS resources in general",
+              "Investigated configuration of components compliant with PCI DSS",
+              "Performed switch-role operations in a multi-account environment",
+              "Introduced IDS/IPS (Tripwire)",
+              "Introduced task automation (e.g., Power Automate) to improve operations",
+              "Implemented IaC for infrastructure using CloudFormation",
+              "Built AWS resources for new feature releases"
             ]
           },
           {
-            "title": "金融系EDIシステム 設計構築案件",
-            "overview": "金融系EDIサービスインフラ基盤の詳細設計、構築",
+            "title": "Financial EDI System Design & Build Project",
+            "overview": "Detailed design and construction of infrastructure for a financial EDI service",
             "period": {
-              "start": "2021年8月",
-              "end": "2021年12月"
+              "start": "",
+              "end": ""
             },
-            "role": "AWSエンジニア",
+            "role": "AWS Engineer",
             "responsibilities": [
-              "設計構築"
+              "Design and build"
             ],
             "technologies": {
               "infrastructure": [
@@ -220,11 +214,11 @@
               ]
             },
             "tasks": [
-              "AWSネットワークリソース全般の設計の提案構築を担当",
-              "PCIDSSに準拠したコンポーネントの選定や設定の調査",
-              "DR対策のためのF/OのLambdaによる自動化機能を構築",
-              "マルチアカウント環境下でのスイッチロール作業",
-              "CloudFormationによるインフラ基盤のIaC化"
+              "Proposed and built the overall design of AWS network resources",
+              "Investigated selection and configuration of components compliant with PCI DSS",
+              "Built an automated failover feature using Lambda for disaster recovery",
+              "Performed switch-role operations in a multi-account environment",
+              "Implemented IaC for infrastructure using CloudFormation"
             ]
           }
         ],
@@ -478,7 +472,7 @@
       "level": "associate"
     },
     {
-      "name": "Python 3 エンジニア認定基礎試験",
+      "name": "Python 3 Certified Engineer Basic Examination",
       "date": "2022-07-02",
       "category": "programming",
       "level": "basic"
@@ -501,48 +495,48 @@
   "personalActivities": {
     "speaking": [
       {
-        "event": "JAWS ミート 2024",
+        "event": "JAWS Meet 2024",
         "eventUrl": "https://jaws-ug-tokaido.connpass.com/event/315732/",
-        "title": "踏み台の運用が変わる？ VPC上で起動できるようになったCloudShellを語る",
+        "title": "Is Bastion Host Operation Changing? Talking About CloudShell Now Launchable in a VPC",
         "slideUrl": "https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru"
       },
       {
-        "event": "オフライン世界最速？AWS re:Inforce 2024 re:Cap セミナー",
+        "event": "Offline, World's Fastest? AWS re:Inforce 2024 re:Cap Seminar",
         "eventUrl": "https://classmethod.connpass.com/event/320489/",
-        "title": "IAM Access Analyzer のアップデートを語ります",
+        "title": "Talking About the IAM Access Analyzer Update",
         "slideUrl": "https://speakerdeck.com/khiraki/iam-access-analyzernoatupudetowoyu-rimasu"
       },
       {
-        "event": "まるクラ勉強会 ONLINE #02 - AWS&Google Cloudの環境分離戦略編 -",
+        "event": "Marukura Study Session ONLINE #02 - AWS & Google Cloud Environment Separation Strategy Edition -",
         "eventUrl": "https://classmethod.connpass.com/event/313913/",
-        "title": "組織におけるAWSネットワーク集約王者決定戦",
+        "title": "The Championship of AWS Network Consolidation in an Organization",
         "slideUrl": "https://speakerdeck.com/khiraki/zu-zhi-niokeruawsnetutowakuji-yue-wang-zhe-jue-ding-zhan"
       },
       {
-        "event": "Hibiya.Tech #4「初心者歓迎！使ってみた技術LT大会」",
+        "event": "Hibiya.Tech #4 \"Beginners Welcome! Hands-on Tech Lightning Talks\"",
         "eventUrl": "https://classmethod.connpass.com/event/311851/",
-        "title": "速さの鍵を握る! Fastly で実現する CDN の力",
+        "title": "The Key to Speed! The Power of CDN Realized with Fastly",
         "slideUrl": "https://speakerdeck.com/khiraki/su-sanojian-wowo-ru-fastly-deshi-xian-suru-cdn-noli"
       },
       {
-        "event": "AWS cafeteria #1　〜サイバーエージェント×ゆめみ×クラスメソッド 3社共催LT会〜",
+        "event": "AWS cafeteria #1 - CyberAgent x Yumemi x Classmethod, a 3-Company Joint Lightning Talk Event -",
         "eventUrl": "https://cyberagent.connpass.com/event/303690/",
-        "title": "クラウドの落とし穴：AWS Backupで発生した高額請求の衝撃とその教訓",
+        "title": "The Cloud Pitfall: The Shock of a High Bill from AWS Backup and the Lessons Learned",
         "slideUrl": "https://speakerdeck.com/khiraki/kuraudonoluo-tosixue-aws-backupdefa-sheng-sitagao-e-qing-qiu-nochong-ji-tosonojiao-xun"
       },
       {
         "event": "DevelopersIO 2023",
         "eventUrl": "https://event.classmethod.jp/developers-io/2023",
-        "title": "AIと一緒に音楽を作ろう ～作曲体験セッション～",
+        "title": "Let's Make Music Together with AI - A Composition Experience Session -",
         "slideUrl": "https://speakerdeck.com/khiraki/aito-xu-niyin-le-wozuo-rou-zuo-qu-ti-yan-setusiyon-developersio-2023"
       }
     ],
     "eventOrganizing": [
       {
-        "event": "AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜",
+        "event": "AWS cafeteria #2 - Team Battle! Let's Think Up the Ultimate AWS Architecture Together! -",
         "eventUrl": "https://classmethod.connpass.com/event/318667/",
         "reportUrl": "https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/",
-        "reportTitle": "AWS cafeteria #2　〜チーム対抗！みんなで最強の AWS アーキテクチャを考えよう！〜 を開催しました！"
+        "reportTitle": "We Held AWS cafeteria #2 - Team Battle! Let's Think Up the Ultimate AWS Architecture Together! -"
       }
     ]
   }

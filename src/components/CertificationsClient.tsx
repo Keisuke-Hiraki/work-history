@@ -1,13 +1,9 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import type { Certification } from '@/lib/types';
+import { useLanguage } from './LanguageProvider';
 import CertificationBadge from './CertificationBadge';
 import SectionHeading from './SectionHeading';
-
-interface CertificationsClientProps {
-  certifications: Certification[];
-}
 
 const LEVEL_STYLES: { [key: string]: string } = {
   professional: 'text-accent',
@@ -17,7 +13,9 @@ const LEVEL_STYLES: { [key: string]: string } = {
   basic: 'text-muted',
 };
 
-export default function CertificationsClient({ certifications }: CertificationsClientProps) {
+export default function CertificationsClient() {
+  const { data: resumeData, t } = useLanguage();
+  const { certifications } = resumeData;
   const [badgeStates, setBadgeStates] = useState<{ [key: number]: boolean }>({});
 
   const getProviderDisplayName = (provider: string) => {
@@ -52,7 +50,7 @@ export default function CertificationsClient({ certifications }: CertificationsC
 
   return (
     <section id="certifications" className="scroll-mt-20 py-14">
-      <SectionHeading eyebrow="Certifications" title="保有資格" />
+      <SectionHeading eyebrow="Certifications" title={t.certifications.title} />
 
       <div className="mt-8 grid gap-3 md:grid-cols-2">
         {certifications.map((cert, index) => (
@@ -64,8 +62,8 @@ export default function CertificationsClient({ certifications }: CertificationsC
             }`}
           >
             <CertificationBadge
-              certName={cert.name}
               badgeImageSrc={getCertificationBadgeImage(cert.name)}
+              badgeAlt={t.certifications.badgeAlt(cert.name)}
               onImageLoad={(hasImage) => handleBadgeLoad(index, hasImage)}
             />
             <div className="min-w-0 flex-1">
@@ -85,16 +83,16 @@ export default function CertificationsClient({ certifications }: CertificationsC
       </div>
 
       <p className="mt-6 text-sm text-muted">
-        最新の資格情報は{' '}
+        {t.certifications.footnotePrefix}{' '}
         <a
           href="https://www.credly.com/users/keisuke-hiraki"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent underline decoration-line underline-offset-4 hover:decoration-accent"
         >
-          Credly
-        </a>{' '}
-        をご参照ください。
+          {t.certifications.footnoteLinkLabel}
+        </a>
+        {t.certifications.footnoteSuffix}
       </p>
     </section>
   );

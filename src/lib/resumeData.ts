@@ -176,8 +176,11 @@ export interface ResumeData {
   lastUpdated: string;
 }
 
-// Cache the parsed data to avoid re-parsing on every request
-let cachedResumeData: ResumeData | null = null;
+// Cache the parsed data to avoid re-parsing on every request, per locale
+const cachedResumeData: { ja: ResumeData | null; en: ResumeData | null } = {
+  ja: null,
+  en: null,
+};
 
 function transformJSONData(jsonData: JSONResumeData): ResumeData {
   return {
@@ -223,21 +226,32 @@ function transformJSONData(jsonData: JSONResumeData): ResumeData {
   };
 }
 
-export function getResumeData(): ResumeData {
-  if (!cachedResumeData) {
-    const fullPath = path.join(process.cwd(), 'data/resume.json');
+function resolveDataPath(locale: 'ja' | 'en'): string {
+  if (locale === 'en') {
+    const enPath = path.join(process.cwd(), 'data/resume.en.json');
+    if (fs.existsSync(enPath)) {
+      return enPath;
+    }
+    // Fall back to the Japanese data if the English translation doesn't exist yet
+  }
+  return path.join(process.cwd(), 'data/resume.json');
+}
+
+export function getResumeData(locale: 'ja' | 'en' = 'ja'): ResumeData {
+  if (!cachedResumeData[locale]) {
+    const fullPath = resolveDataPath(locale);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const jsonData: JSONResumeData = JSON.parse(fileContents);
-    cachedResumeData = transformJSONData(jsonData);
+    cachedResumeData[locale] = transformJSONData(jsonData);
   }
-  return cachedResumeData;
+  return cachedResumeData[locale] as ResumeData;
 }
 
 // Force refresh the cache (useful for development)
-export function refreshResumeData(): ResumeData {
-  const fullPath = path.join(process.cwd(), 'data/resume.json');
+export function refreshResumeData(locale: 'ja' | 'en' = 'ja'): ResumeData {
+  const fullPath = resolveDataPath(locale);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const jsonData: JSONResumeData = JSON.parse(fileContents);
-  cachedResumeData = transformJSONData(jsonData);
-  return cachedResumeData;
+  cachedResumeData[locale] = transformJSONData(jsonData);
+  return cachedResumeData[locale] as ResumeData;
 }
