@@ -326,11 +326,11 @@ Linux/Windows
 ### 登壇
 
 - [MEGU-Meet～目黒で"Meat"しながら"Meet"しよう！～ #4](https://megu-meet02.connpass.com/event/392443/)
-  - 資料： [その羽根、本当に境界になっていますか？](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
+  - 資料： [そのハーネス、本当に境界になっていますか？](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
 - [JAWS-UG朝会](https://jawsug-asa.connpass.com/event/348651/)
   - 資料： [セキュリティ運用の可能性を感じた！AWS Well-Architected Security Assessment Tool MCP Serverをご紹介します](https://speakerdeck.com/khiraki/sekiyuriteiyun-yong-noke-neng-xing-wogan-zita-aws-well-architected-security-assessment-tool-mcp-server-wogoshao-jie-simasu)
 - [JAWS DAYS 2026](https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/)
-  - 資料： [安全に愛を活かして、セキュリティ運用を効率化してた実践談](https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026)
+  - 資料： [安全にAIを活用してセキュリティ運用を効率化した実践談](https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026)
 - [JAWS ミート 2024](https://jaws-ug-tokaido.connpass.com/event/315732/)
   - 資料： [踏み台の運用が変わる？ VPC上で起動できるようになったCloudShellを語る](https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru)
 - [オフライン世界最速？AWS re:Inforce 2024 re:Cap セミナー](https://classmethod.connpass.com/event/320489/)

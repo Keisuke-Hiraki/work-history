@@ -23,7 +23,6 @@
 | Jul 2025 – Present | Cyber Security Cloud, Inc. |
 | Apr 2023 – Jun 2025 | Classmethod, Inc. |
 | Jan 2021 – Mar 2023 | Yume Technology, Inc. (now OpenUp IT Engineer, Inc.) |
-| Dec 2020 | Shizuoka University, Faculty of Engineering, Mechanical Engineering (withdrew) |
 
 # 業務経験概略
 
@@ -327,7 +326,7 @@ For the latest certifications, please refer to [Credly](https://www.credly.com/u
 ### 登壇
 
 - [MEGU-Meet #4 - Let's "Meat" while we "Meet" in Meguro! -](https://megu-meet02.connpass.com/event/392443/)
-  - 資料： [Is That Feather Really Serving as a Boundary?](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
+  - 資料： [Is That Harness Really Serving as a Boundary?](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
 - [JAWS-UG Morning Meeting](https://jawsug-asa.connpass.com/event/348651/)
   - 資料： [Feeling the Potential of Security Operations! Introducing the AWS Well-Architected Security Assessment Tool MCP Server](https://speakerdeck.com/khiraki/sekiyuriteiyun-yong-noke-neng-xing-wogan-zita-aws-well-architected-security-assessment-tool-mcp-server-wogoshao-jie-simasu)
 - [JAWS DAYS 2026](https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/)

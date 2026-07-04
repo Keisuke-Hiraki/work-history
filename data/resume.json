@@ -57,11 +57,6 @@
       "period": "2021年1月～2023年3月",
       "company": "株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア）",
       "status": "past"
-    },
-    {
-      "period": "2020年12月",
-      "company": "静岡大学 工学部 機械工学科（中途退学）",
-      "status": "past"
     }
   ],
   "workExperience": {
@@ -598,7 +593,7 @@
       {
         "event": "MEGU-Meet～目黒で\"Meat\"しながら\"Meet\"しよう！～ #4",
         "eventUrl": "https://megu-meet02.connpass.com/event/392443/",
-        "title": "その羽根、本当に境界になっていますか？",
+        "title": "そのハーネス、本当に境界になっていますか？",
         "slideUrl": "https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka"
       },
       {
@@ -610,7 +605,7 @@
       {
         "event": "JAWS DAYS 2026",
         "eventUrl": "https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/",
-        "title": "安全に愛を活かして、セキュリティ運用を効率化してた実践談",
+        "title": "安全にAIを活用してセキュリティ運用を効率化した実践談",
         "slideUrl": "https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026"
       },
       {
