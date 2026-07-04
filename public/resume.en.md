@@ -5,16 +5,16 @@
 | Key | Value |
 | --- | --- |
 | 名前 | Keisuke Hiraki |
-| 職種 | Cybersecurity Consultant |
+| 職種 | Cloud Security Consultant |
 
 # アカウント
 
+- [Zenn](https://zenn.dev/khirasan)
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [LinkedIn](https://www.linkedin.com/in/k-hiraki/)
 - [X(旧Twitter)](https://x.com/k_hirasan)
 - [GitHub](https://github.com/Keisuke-Hiraki)
 - [SpeakerDeck](https://speakerdeck.com/khiraki)
-- [Zenn](https://zenn.dev/khirasan)
 
 # 職務経歴概略
 
@@ -26,7 +26,7 @@
 
 # 業務経験概略
 
-Currently serving as a Technical Account Manager (TAM) for CloudFastener, a cloud security operations support product, providing incident response, CSPM, vulnerability management, WAF operations, and consulting on AI/governance organizational structures for public clouds including AWS. Since January 2026, I have also served as manager of the TAM team, taking on team management duties (while continuing to support customers directly as a playing manager). Building on experience in design, implementation, and consulting cultivated as an AWS Solutions Architect, I provide support in security and governance.
+Currently serving as a Technical Account Manager (TAM) for [CloudFastener](https://cloud-fastener.com/), a cloud security operations support product, providing incident response, CSPM, vulnerability management, WAF operations, and consulting on AI/governance organizational structures for public clouds including AWS. Since January 2026, I have also served as manager of the TAM team, taking on team management duties (while continuing to support customers directly as a playing manager). Building on experience in design, implementation, and consulting cultivated as an AWS Solutions Architect, I provide support in security and governance.
 
 Key areas of professional experience include:
 

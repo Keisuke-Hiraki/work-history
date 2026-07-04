@@ -5,16 +5,16 @@
 | Key | Value |
 | --- | --- |
 | 名前 | 平木 佳介（Hiraki Keisuke） |
-| 職種 | サイバーセキュリティコンサルタント |
+| 職種 | クラウドセキュリティコンサルタント |
 
 # アカウント
 
+- [Zenn](https://zenn.dev/khirasan)
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [LinkedIn](https://www.linkedin.com/in/k-hiraki/)
 - [X(旧Twitter)](https://x.com/k_hirasan)
 - [GitHub](https://github.com/Keisuke-Hiraki)
 - [SpeakerDeck](https://speakerdeck.com/khiraki)
-- [Zenn](https://zenn.dev/khirasan)
 
 # 職務経歴概略
 
@@ -26,7 +26,7 @@
 
 # 業務経験概略
 
-現在は、クラウドセキュリティ運用支援プロダクト「CloudFastener」のテクニカルアカウントマネージャー（TAM）として、AWSをはじめとしたパブリッククラウドのインシデントレスポンスやCSPM・脆弱性対策・WAFなどのセキュリティ運用、AIやガバナンス周りの組織体制に関するコンサルティングを行っております。2026年1月からはTAMチームのマネージャーとしてチームマネジメント業務も担っています（プレイングマネージャーとして顧客支援も継続）。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。
+現在は、クラウドセキュリティ運用支援プロダクト「[CloudFastener](https://cloud-fastener.com/)」のテクニカルアカウントマネージャー（TAM）として、AWSをはじめとしたパブリッククラウドのインシデントレスポンスやCSPM・脆弱性対策・WAFなどのセキュリティ運用、AIやガバナンス周りの組織体制に関するコンサルティングを行っております。2026年1月からはTAMチームのマネージャーとしてチームマネジメント業務も担っています（プレイングマネージャーとして顧客支援も継続）。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。
 
 主な業務経験としては以下です。
 
