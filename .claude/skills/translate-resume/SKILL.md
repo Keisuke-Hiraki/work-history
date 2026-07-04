@@ -46,7 +46,6 @@ Everything else — the values. Concise resume style, verb-first bullets ("Desig
 | クラスメソッド株式会社 | Classmethod, Inc. |
 | 株式会社サイバーセキュリティクラウド | Cyber Security Cloud, Inc. |
 | 株式会社夢テクノロジー（現 株式会社オープンアップITエンジニア） | Yume Technology, Inc. (now OpenUp IT Engineer, Inc.) |
-| 静岡大学 工学部 機械工学科（中途退学） | Shizuoka University, Faculty of Engineering, Mechanical Engineering (withdrew) |
 | Python 3 エンジニア認定基礎試験 | Python 3 Certified Engineer Basic Examination |
 | ソリューションアーキテクト | Solutions Architect |
 | AWSエンジニア | AWS Engineer |

@@ -23,7 +23,6 @@
 | Jul 2025 – Present | Cyber Security Cloud, Inc. |
 | Apr 2023 – Jun 2025 | Classmethod, Inc. |
 | Jan 2021 – Mar 2023 | Yume Technology, Inc. (now OpenUp IT Engineer, Inc.) |
-| Dec 2020 | Shizuoka University, Faculty of Engineering, Mechanical Engineering (withdrew) |
 
 # 業務経験概略
 
