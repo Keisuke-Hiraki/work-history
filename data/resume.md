@@ -14,6 +14,7 @@
 - [X(旧Twitter)](https://x.com/k_hirasan)
 - [GitHub](https://github.com/Keisuke-Hiraki)
 - [SpeakerDeck](https://speakerdeck.com/khiraki)
+- [Zenn](https://zenn.dev/khirasan)
 
 # 職務経歴概略
 
@@ -26,10 +27,11 @@
 
 # 業務経験概略
 
-現在は、AIやクラウドをはじめとしたサイバーセキュリティ領域のコンサルティングを行っております。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。
+現在は、クラウドセキュリティ運用支援プロダクト「CloudFastener」のテクニカルアカウントマネージャー（TAM）として、AWSをはじめとしたパブリッククラウドのインシデントレスポンスやCSPM・脆弱性対策・WAFなどのセキュリティ運用、AIやガバナンス周りの組織体制に関するコンサルティングを行っております。2026年1月からはTAMチームのマネージャーとしてチームマネジメント業務も担っています（プレイングマネージャーとして顧客支援も継続）。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。
 
 主な業務経験としては以下です。
 
+- クラウドセキュリティ運用支援プロダクト「CloudFastener」のTAMとしての顧客支援およびチームマネジメント
 - PCIDSSに準拠した金融システムのAWS基盤設計構築運用
 - 大手ポイントサービスにおけるデータ分析基盤のネットワーク・セキュリティ設計構築支援
 - CloudFormation、Terraformを活用したインフラ基盤のIaC化
@@ -37,6 +39,47 @@
 - ブロックチェーン技術に基づくAWSインフラの設計構築支援
 
 # 職務経歴詳細
+
+## 株式会社サイバーセキュリティクラウド
+
+- 事業内容：サイバーセキュリティサービスの開発・提供（クラウド型WAF「攻撃遮断くん」、マルチクラウド対応WAF運用サービス「WafCharm」、脆弱性管理クラウド「SIDfm」等）  
+- 従業員：
+- 在籍期間： 2025年7月 ～ 現在
+- 雇用形態： 正社員
+
+### CloudFastener テクニカルアカウントマネージャー（TAM）
+
+- 概要
+  - クラウドセキュリティ運用支援プロダクト「CloudFastener」のテクニカルアカウントマネージャーとして、顧客のクラウドセキュリティ運用を支援
+- 期間
+  - 2025年7月 ～ 現在
+- 経験した職種・役割
+  - テクニカルアカウントマネージャー
+- 担当工程
+  - コンサルティング
+- 使用技術
+  - インフラ： AWS、Azure、Google Cloud
+- 業務内容
+  - AWSをはじめとしたパブリッククラウドにおけるインシデントレスポンス支援
+  - CSPM・脆弱性対策・WAF運用など、クラウドセキュリティ運用のコンサルティング
+  - AIやガバナンス周りの組織体制構築に関するコンサルティング
+  - Claude Code、Gemini、CodexなどのAIエージェントを活用した業務効率化
+
+### TAMチームマネージャー
+
+- 概要
+  - TAMチームのマネージャーとして、チームの円滑な業務運営のためのマネジメント業務を担当（プレイングマネージャーとして顧客支援も継続）
+- 期間
+  - 2026年1月 ～ 現在
+- 経験した職種・役割
+  - マネージャー
+- 担当工程
+  - マネジメント、コンサルティング
+- 使用技術
+  - インフラ： AWS、Azure、Google Cloud
+- 業務内容
+  - TAMチームメンバーのマネジメント、業務効率化の推進
+  - プレイングマネージャーとして顧客の技術支援を継続
 
 ## クラスメソッド株式会社
 
@@ -234,6 +277,12 @@ Linux/Windows
 - Backlog/Jira/Hubspot
 - GitHub
 
+### AIエージェント・マルチクラウド
+
+- AIエージェント (Claude Code/Gemini/Codex)
+- Azure (Microsoft Defender for Cloud/IAM系機能)
+- Google Cloud (Security Command Center/Cloud Armor/Vertex AI/DevOps Agent/Security Agent)
+
 ## 保有資格
 
 |資格名 | 取得日 |
@@ -241,7 +290,7 @@ Linux/Windows
 | AWS Certified Cloud Practitioner | 2021/01/10 |
 | AWS Certified Solutions Architect - Associate | 2021/03/11 |
 | AWS Certified Developer - Associate | 2022/03/22 |
-| AWS Certified SysOps Administrator - Associate | 2022/04/16 |
+| AWS Certified SysOps Administrator - Associate（有効期限切れ） | 2022/04/16 |
 | AWS Certified Solutions Architect - Professional | 2022/06/20 |
 | AWS Certified DevOps Engineer - Professional | 2022/07/18 |
 | AWS Certified Database – Specialty | 2023/07/17 |
@@ -252,8 +301,9 @@ Linux/Windows
 | AWS Certified Advanced Networking – Specialty | 2024/03/15 |
 | AWS Certified AI Practitioner | 2025/03/10 |
 | AWS Certified Machine Learning Engineer – Associate | 2025/03/11 |
+| AWS Certified CloudOps Engineer – Associate | 2026/01/29 |
 | Microsoft Certified: Azure Fundamentals | 2022/05/08 |
-| Microsoft Certified: Azure Administrator Associate | 2023/01/30 |
+| Microsoft Certified: Azure Administrator Associate（有効期限切れ） | 2023/01/30 |
 | Python 3 エンジニア認定基礎試験 | 2022/07/02 |
 
 最新は、[Credly](https://www.credly.com/users/keisuke-hiraki)を参照ください。
@@ -262,18 +312,26 @@ Linux/Windows
 
 | 名前 | 年 |
 | --- | --- |
-| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2025 |
-| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 |
+| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2026 |
+| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 - 2026 |
+| [2026 Japan AWS Top Engineers（Security部門）](https://aws.amazon.com/jp/blogs/psa/2026-japan-aws-top-engineers/) | 2026 |
 
-## 個人活動
+## コミュニティ活動
 
 ### ブログ
 
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [Qiita](https://qiita.com/HIRA_dayo)
+- [Zenn](https://zenn.dev/khirasan)
 
 ### 登壇
 
+- [MEGU-Meet～目黒で"Meat"しながら"Meet"しよう！～ #4](https://megu-meet02.connpass.com/event/392443/)
+  - 資料： [その羽根、本当に境界になっていますか？](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
+- [JAWS-UG朝会](https://jawsug-asa.connpass.com/event/348651/)
+  - 資料： [セキュリティ運用の可能性を感じた！AWS Well-Architected Security Assessment Tool MCP Serverをご紹介します](https://speakerdeck.com/khiraki/sekiyuriteiyun-yong-noke-neng-xing-wogan-zita-aws-well-architected-security-assessment-tool-mcp-server-wogoshao-jie-simasu)
+- [JAWS DAYS 2026](https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/)
+  - 資料： [安全に愛を活かして、セキュリティ運用を効率化してた実践談](https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026)
 - [JAWS ミート 2024](https://jaws-ug-tokaido.connpass.com/event/315732/)
   - 資料： [踏み台の運用が変わる？ VPC上で起動できるようになったCloudShellを語る](https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru)
 - [オフライン世界最速？AWS re:Inforce 2024 re:Cap セミナー](https://classmethod.connpass.com/event/320489/)
@@ -289,5 +347,8 @@ Linux/Windows
 
 ### イベント開催
 
+- [クラウド食堂 #8 ~クラウド初心者応援LT会~](https://cloud-shokudo.connpass.com/event/391531/)
+- [クラウド食堂 #7 ~1周年をふりかえってみよう会~](https://cloud-shokudo.connpass.com/event/382188/)
+- [クラウド食堂 #6 CloudQuestトーナメントで遊ぶ会](https://cloud-shokudo.connpass.com/event/373476/)
 - [AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜](https://classmethod.connpass.com/event/318667/)
   - 開催報告： [AWS cafeteria #2　〜チーム対抗！みんなで最強の AWS アーキテクチャを考えよう！〜 を開催しました！](https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/)

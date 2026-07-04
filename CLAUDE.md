@@ -38,7 +38,7 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs `npm run b
 
 Runtime data flow: `data/resume.json` → `src/lib/resumeData.ts` (`getResumeData()`, module-level cached, reads the JSON at build/request time and reshapes it into the `ResumeData` type used by components) → page components. Types for the reshaped data live in `src/lib/types.ts`.
 
-Both parsers key off exact Japanese markdown section headers in `resume.md` (`# 基本情報`, `# アカウント`, `# 職務経歴概略`, `# 職務経歴詳細` with `## 会社名` / `### 案件名` subsections, `# スキル・経験`, `# 保有資格`, `# 表彰`, `# 個人活動`) and specific field labels (`事業内容：`, `在籍期間：`, etc.). If you change these headers/labels in `resume.md`, update `scripts/sync-resume.js` accordingly.
+Both parsers key off exact Japanese markdown section headers in `resume.md` (`# 基本情報`, `# アカウント`, `# 職務経歴概略`, `# 職務経歴詳細` with `## 会社名` / `### 案件名` subsections, `# スキル・経験`, `# 保有資格`, `# 表彰`, `# コミュニティ活動`) and specific field labels (`事業内容：`, `在籍期間：`, etc.). If you change these headers/labels in `resume.md`, update `scripts/sync-resume.js` accordingly.
 
 ## Component pattern
 

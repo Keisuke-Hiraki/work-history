@@ -35,6 +35,11 @@
       "name": "SpeakerDeck",
       "url": "https://speakerdeck.com/khiraki",
       "type": "presentation"
+    },
+    {
+      "name": "Zenn",
+      "url": "https://zenn.dev/khirasan",
+      "type": "social"
     }
   ],
   "careerSummary": [
@@ -61,8 +66,9 @@
   ],
   "workExperience": {
     "overview": {
-      "ja": "現在は、AIやクラウドをはじめとしたサイバーセキュリティ領域のコンサルティングを行っております。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。",
+      "ja": "現在は、クラウドセキュリティ運用支援プロダクト「CloudFastener」のテクニカルアカウントマネージャー（TAM）として、AWSをはじめとしたパブリッククラウドのインシデントレスポンスやCSPM・脆弱性対策・WAFなどのセキュリティ運用、AIやガバナンス周りの組織体制に関するコンサルティングを行っております。2026年1月からはTAMチームのマネージャーとしてチームマネジメント業務も担っています（プレイングマネージャーとして顧客支援も継続）。AWSソリューションアーキテクトとして培った設計構築・コンサルティングの経験を基盤に、セキュリティとガバナンスの支援を提供しています。",
       "keyExperiences": [
+        "クラウドセキュリティ運用支援プロダクト「CloudFastener」のTAMとしての顧客支援およびチームマネジメント",
         "PCIDSSに準拠した金融システムのAWS基盤設計構築運用",
         "大手ポイントサービスにおけるデータ分析基盤のネットワーク・セキュリティ設計構築支援",
         "CloudFormation、Terraformを活用したインフラ基盤のIaC化",
@@ -71,6 +77,67 @@
       ]
     },
     "companies": [
+      {
+        "name": "株式会社サイバーセキュリティクラウド",
+        "businessDescription": "サイバーセキュリティサービスの開発・提供（クラウド型WAF「攻撃遮断くん」、マルチクラウド対応WAF運用サービス「WafCharm」、脆弱性管理クラウド「SIDfm」等）",
+        "employees": "",
+        "period": {
+          "start": "2025年7月",
+          "end": "現在"
+        },
+        "employmentType": "正社員",
+        "projects": [
+          {
+            "title": "CloudFastener テクニカルアカウントマネージャー（TAM）",
+            "overview": "クラウドセキュリティ運用支援プロダクト「CloudFastener」のテクニカルアカウントマネージャーとして、顧客のクラウドセキュリティ運用を支援",
+            "period": {
+              "start": "2025年7月",
+              "end": "現在"
+            },
+            "role": "テクニカルアカウントマネージャー",
+            "responsibilities": [
+              "コンサルティング"
+            ],
+            "technologies": {
+              "infrastructure": [
+                "AWS",
+                "Azure",
+                "Google Cloud"
+              ]
+            },
+            "tasks": [
+              "AWSをはじめとしたパブリッククラウドにおけるインシデントレスポンス支援",
+              "CSPM・脆弱性対策・WAF運用など、クラウドセキュリティ運用のコンサルティング",
+              "AIやガバナンス周りの組織体制構築に関するコンサルティング",
+              "Claude Code、Gemini、CodexなどのAIエージェントを活用した業務効率化"
+            ]
+          },
+          {
+            "title": "TAMチームマネージャー",
+            "overview": "TAMチームのマネージャーとして、チームの円滑な業務運営のためのマネジメント業務を担当（プレイングマネージャーとして顧客支援も継続）",
+            "period": {
+              "start": "2026年1月",
+              "end": "現在"
+            },
+            "role": "マネージャー",
+            "responsibilities": [
+              "マネジメント、コンサルティング"
+            ],
+            "technologies": {
+              "infrastructure": [
+                "AWS",
+                "Azure",
+                "Google Cloud"
+              ]
+            },
+            "tasks": [
+              "TAMチームメンバーのマネジメント、業務効率化の推進",
+              "プレイングマネージャーとして顧客の技術支援を継続"
+            ]
+          }
+        ],
+        "additionalActivities": []
+      },
       {
         "name": "クラスメソッド株式会社",
         "businessDescription": "クラウド（AWS等）の技術コンサルティング、開発等",
@@ -377,6 +444,22 @@
         "Jira",
         "Hubspot",
         "GitHub"
+      ],
+      "aiエージェント": [
+        "Claude Code",
+        "Gemini",
+        "Codex"
+      ],
+      "azure": [
+        "Microsoft Defender for Cloud",
+        "IAM系機能"
+      ],
+      "google cloud": [
+        "Security Command Center",
+        "Cloud Armor",
+        "Vertex AI",
+        "DevOps Agent",
+        "Security Agent"
       ]
     }
   },
@@ -400,7 +483,7 @@
       "level": "associate"
     },
     {
-      "name": "AWS Certified SysOps Administrator - Associate",
+      "name": "AWS Certified SysOps Administrator - Associate（有効期限切れ）",
       "date": "2022-04-16",
       "category": "aws",
       "level": "associate"
@@ -466,13 +549,19 @@
       "level": "associate"
     },
     {
+      "name": "AWS Certified CloudOps Engineer – Associate",
+      "date": "2026-01-29",
+      "category": "aws",
+      "level": "associate"
+    },
+    {
       "name": "Microsoft Certified: Azure Fundamentals",
       "date": "2022-05-08",
       "category": "azure",
       "level": "foundational"
     },
     {
-      "name": "Microsoft Certified: Azure Administrator Associate",
+      "name": "Microsoft Certified: Azure Administrator Associate（有効期限切れ）",
       "date": "2023-01-30",
       "category": "azure",
       "level": "associate"
@@ -487,19 +576,43 @@
   "awards": [
     {
       "name": "AWS Community Builders",
-      "year": "2024 - 2025",
+      "year": "2024 - 2026",
       "url": "https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND",
       "category": "community"
     },
     {
       "name": "Japan AWS All Certifications Engineers",
-      "year": "2024",
+      "year": "2024 - 2026",
       "url": "https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/",
+      "category": "community"
+    },
+    {
+      "name": "2026 Japan AWS Top Engineers（Security部門）",
+      "year": "2026",
+      "url": "https://aws.amazon.com/jp/blogs/psa/2026-japan-aws-top-engineers/",
       "category": "community"
     }
   ],
   "personalActivities": {
     "speaking": [
+      {
+        "event": "MEGU-Meet～目黒で\"Meat\"しながら\"Meet\"しよう！～ #4",
+        "eventUrl": "https://megu-meet02.connpass.com/event/392443/",
+        "title": "その羽根、本当に境界になっていますか？",
+        "slideUrl": "https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka"
+      },
+      {
+        "event": "JAWS-UG朝会",
+        "eventUrl": "https://jawsug-asa.connpass.com/event/348651/",
+        "title": "セキュリティ運用の可能性を感じた！AWS Well-Architected Security Assessment Tool MCP Serverをご紹介します",
+        "slideUrl": "https://speakerdeck.com/khiraki/sekiyuriteiyun-yong-noke-neng-xing-wogan-zita-aws-well-architected-security-assessment-tool-mcp-server-wogoshao-jie-simasu"
+      },
+      {
+        "event": "JAWS DAYS 2026",
+        "eventUrl": "https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/",
+        "title": "安全に愛を活かして、セキュリティ運用を効率化してた実践談",
+        "slideUrl": "https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026"
+      },
       {
         "event": "JAWS ミート 2024",
         "eventUrl": "https://jaws-ug-tokaido.connpass.com/event/315732/",
@@ -538,6 +651,18 @@
       }
     ],
     "eventOrganizing": [
+      {
+        "event": "クラウド食堂 #8 ~クラウド初心者応援LT会~",
+        "eventUrl": "https://cloud-shokudo.connpass.com/event/391531/"
+      },
+      {
+        "event": "クラウド食堂 #7 ~1周年をふりかえってみよう会~",
+        "eventUrl": "https://cloud-shokudo.connpass.com/event/382188/"
+      },
+      {
+        "event": "クラウド食堂 #6 CloudQuestトーナメントで遊ぶ会",
+        "eventUrl": "https://cloud-shokudo.connpass.com/event/373476/"
+      },
       {
         "event": "AWS cafeteria #2　〜チーム対抗！みんなで最強のAWSアーキテクチャを考えよう！〜",
         "eventUrl": "https://classmethod.connpass.com/event/318667/",

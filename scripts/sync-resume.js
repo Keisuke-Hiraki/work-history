@@ -543,7 +543,7 @@ class ResumeMarkdownParser {
   }
 
   parsePersonalActivities() {
-    const content = this.sections.get('個人活動') || '';
+    const content = this.sections.get('コミュニティ活動') || '';
     
     const speaking = this.parseSpeakingEngagements(content);
     const eventOrganizing = this.parseEventOrganizing(content);

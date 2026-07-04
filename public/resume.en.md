@@ -14,6 +14,7 @@
 - [X(旧Twitter)](https://x.com/k_hirasan)
 - [GitHub](https://github.com/Keisuke-Hiraki)
 - [SpeakerDeck](https://speakerdeck.com/khiraki)
+- [Zenn](https://zenn.dev/khirasan)
 
 # 職務経歴概略
 
@@ -26,10 +27,11 @@
 
 # 業務経験概略
 
-Currently providing consulting in the cybersecurity domain, including AI and cloud security. Building on experience in design, implementation, and consulting cultivated as an AWS Solutions Architect, I provide support in security and governance.
+Currently serving as a Technical Account Manager (TAM) for CloudFastener, a cloud security operations support product, providing incident response, CSPM, vulnerability management, WAF operations, and consulting on AI/governance organizational structures for public clouds including AWS. Since January 2026, I have also served as manager of the TAM team, taking on team management duties (while continuing to support customers directly as a playing manager). Building on experience in design, implementation, and consulting cultivated as an AWS Solutions Architect, I provide support in security and governance.
 
 Key areas of professional experience include:
 
+- Customer support and team management as a TAM for CloudFastener, a cloud security operations support product
 - Design, implementation, and operation of AWS infrastructure for financial systems compliant with PCI DSS
 - Support for designing and building network and security architecture for a data analytics platform at a major points-service company
 - IaC transformation of infrastructure using CloudFormation and Terraform
@@ -37,6 +39,47 @@ Key areas of professional experience include:
 - Design and build support for AWS infrastructure based on blockchain technology
 
 # 職務経歴詳細
+
+## Cyber Security Cloud, Inc.
+
+- 事業内容：Development and provision of cybersecurity services (cloud-based WAF "Attack Blocker-kun", multi-cloud WAF operation service "WafCharm", vulnerability management cloud "SIDfm", etc.)
+- 従業員：
+- 在籍期間： Jul 2025 – Present
+- 雇用形態： Full-time
+
+### Technical Account Manager (TAM) for CloudFastener
+
+- 概要
+  - Supporting customers' cloud security operations as Technical Account Manager for CloudFastener, a cloud security operations support product
+- 期間
+  - Jul 2025 – Present
+- 経験した職種・役割
+  - Technical Account Manager
+- 担当工程
+  - Consulting
+- 使用技術
+  - インフラ： AWS, Azure, Google Cloud
+- 業務内容
+  - Supported incident response for public clouds including AWS
+  - Consulted on cloud security operations including CSPM, vulnerability management, and WAF operations
+  - Consulted on organizational structures for AI and governance
+  - Improved operational efficiency using AI agents such as Claude Code, Gemini, and Codex
+
+### TAM Team Manager
+
+- 概要
+  - Managed the TAM team to ensure smooth team operations (continuing to support customers directly as a playing manager)
+- 期間
+  - Jan 2026 – Present
+- 経験した職種・役割
+  - Manager
+- 担当工程
+  - Management, Consulting
+- 使用技術
+  - インフラ： AWS, Azure, Google Cloud
+- 業務内容
+  - Managed TAM team members and drove operational efficiency improvements
+  - Continued providing technical support to customers as a playing manager
 
 ## Classmethod, Inc.
 
@@ -234,6 +277,12 @@ Linux/Windows
 - Backlog/Jira/Hubspot
 - GitHub
 
+### AI Agents / Multi-cloud
+
+- AI Agents (Claude Code/Gemini/Codex)
+- Azure (Microsoft Defender for Cloud/IAM features)
+- Google Cloud (Security Command Center/Cloud Armor/Vertex AI/DevOps Agent/Security Agent)
+
 ## 保有資格
 
 |資格名 | 取得日 |
@@ -241,7 +290,7 @@ Linux/Windows
 | AWS Certified Cloud Practitioner | 2021/01/10 |
 | AWS Certified Solutions Architect - Associate | 2021/03/11 |
 | AWS Certified Developer - Associate | 2022/03/22 |
-| AWS Certified SysOps Administrator - Associate | 2022/04/16 |
+| AWS Certified SysOps Administrator - Associate (Expired) | 2022/04/16 |
 | AWS Certified Solutions Architect - Professional | 2022/06/20 |
 | AWS Certified DevOps Engineer - Professional | 2022/07/18 |
 | AWS Certified Database – Specialty | 2023/07/17 |
@@ -252,8 +301,9 @@ Linux/Windows
 | AWS Certified Advanced Networking – Specialty | 2024/03/15 |
 | AWS Certified AI Practitioner | 2025/03/10 |
 | AWS Certified Machine Learning Engineer – Associate | 2025/03/11 |
+| AWS Certified CloudOps Engineer – Associate | 2026/01/29 |
 | Microsoft Certified: Azure Fundamentals | 2022/05/08 |
-| Microsoft Certified: Azure Administrator Associate | 2023/01/30 |
+| Microsoft Certified: Azure Administrator Associate (Expired) | 2023/01/30 |
 | Python 3 Certified Engineer Basic Examination | 2022/07/02 |
 
 For the latest certifications, please refer to [Credly](https://www.credly.com/users/keisuke-hiraki).
@@ -262,18 +312,26 @@ For the latest certifications, please refer to [Credly](https://www.credly.com/u
 
 | 名前 | 年 |
 | --- | --- |
-| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2025 |
-| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 |
+| [AWS Community Builders](https://aws.amazon.com/jp/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=Hiraki+Keisuke&cb-cards.q_operator=AND) | 2024 - 2026 |
+| [Japan AWS All Certifications Engineers](https://aws.amazon.com/jp/blogs/psa/2024-japan-aws-all-certifications-engineers/) | 2024 - 2026 |
+| [2026 Japan AWS Top Engineers (Security)](https://aws.amazon.com/jp/blogs/psa/2026-japan-aws-top-engineers/) | 2026 |
 
-## 個人活動
+## コミュニティ活動
 
 ### ブログ
 
 - [DevelopersIO](https://dev.classmethod.jp/author/hiraki-keisuke/)
 - [Qiita](https://qiita.com/HIRA_dayo)
+- [Zenn](https://zenn.dev/khirasan)
 
 ### 登壇
 
+- [MEGU-Meet #4 - Let's "Meat" while we "Meet" in Meguro! -](https://megu-meet02.connpass.com/event/392443/)
+  - 資料： [Is That Feather Really Serving as a Boundary?](https://speakerdeck.com/khiraki/sonohanesu-ben-dang-nijing-jie-ninatuteimasuka)
+- [JAWS-UG Morning Meeting](https://jawsug-asa.connpass.com/event/348651/)
+  - 資料： [Feeling the Potential of Security Operations! Introducing the AWS Well-Architected Security Assessment Tool MCP Server](https://speakerdeck.com/khiraki/sekiyuriteiyun-yong-noke-neng-xing-wogan-zita-aws-well-architected-security-assessment-tool-mcp-server-wogoshao-jie-simasu)
+- [JAWS DAYS 2026](https://jawsdays2026.jaws-ug.jp/sessions/f4221466-df8e-455d-8eeb-113665293d71/)
+  - 資料： [Utilizing AI Safely to Streamline Security Operations: A Practical Case Study](https://speakerdeck.com/khiraki/an-quan-niaiwohuo-yong-sitesekiyuriteiyun-yong-woxiao-lu-hua-sitashi-jian-tan-jaws-days-2026)
 - [JAWS Meet 2024](https://jaws-ug-tokaido.connpass.com/event/315732/)
   - 資料： [Is Bastion Host Operation Changing? Talking About CloudShell Now Launchable in a VPC](https://speakerdeck.com/khiraki/ta-mitai-noyun-yong-gabian-waru-vpcshang-deqi-dong-dekiruyouninatutacloudshellwoyu-ru)
 - [Offline, World's Fastest? AWS re:Inforce 2024 re:Cap Seminar](https://classmethod.connpass.com/event/320489/)
@@ -289,5 +347,8 @@ For the latest certifications, please refer to [Credly](https://www.credly.com/u
 
 ### イベント開催
 
+- [Cloud Shokudo #8 ~ Beginner-Friendly Lightning Talks ~](https://cloud-shokudo.connpass.com/event/391531/)
+- [Cloud Shokudo #7 ~ Looking Back on Our 1st Anniversary ~](https://cloud-shokudo.connpass.com/event/382188/)
+- [Cloud Shokudo #6 ~ AWS Cloud Quest Tournament Play Session ~](https://cloud-shokudo.connpass.com/event/373476/)
 - [AWS cafeteria #2 - Team Battle! Let's Think Up the Ultimate AWS Architecture Together! -](https://classmethod.connpass.com/event/318667/)
   - 開催報告： [We Held AWS cafeteria #2 - Team Battle! Let's Think Up the Ultimate AWS Architecture Together! -](https://dev.classmethod.jp/articles/aws-cafeteria-2-team-challenge-designing-the-ultimate-aws-architecture/)
