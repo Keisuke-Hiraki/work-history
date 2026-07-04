@@ -42,7 +42,7 @@ Key areas of professional experience include:
 ## Cyber Security Cloud, Inc.
 
 - 事業内容：Development and provision of cybersecurity services (cloud-based WAF "Attack Blocker-kun", multi-cloud WAF operation service "WafCharm", vulnerability management cloud "SIDfm", etc.)
-- 従業員：
+- 従業員：Approx. 179 (as of January 2026)
 - 在籍期間： Jul 2025 – Present
 - 雇用形態： Full-time
 
