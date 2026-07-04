@@ -84,7 +84,7 @@ Key areas of professional experience include:
 
 - 事業内容：Cloud (AWS, etc.) technical consulting, development, and related services
 - 従業員：Approx. 780 (as of July 2024, group-wide)
-- 在籍期間： Apr 2023 – Present
+- 在籍期間： Apr 2023 – Jun 2025
 - 雇用形態： Full-time
 
 ### AWS Operations Support
@@ -92,7 +92,7 @@ Key areas of professional experience include:
 - 概要
   - AWS operations support accompanying the launch of a CCoE (Cloud Center of Excellence) team
 - 期間
-  - Oct 2023 – Present
+  - Oct 2023 – Jun 2025
 - 経験した職種・役割
   - Solutions Architect
 - 担当工程
@@ -110,7 +110,7 @@ Key areas of professional experience include:
 - 概要
   - Customer support equivalent to a Technical Account Manager (TAM)
 - 期間
-  - Jun 2023 – Present
+  - Jun 2023 – Jun 2025
 - 経験した職種・役割
   - Solutions Architect
 - 担当工程
